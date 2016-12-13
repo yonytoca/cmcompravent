@@ -1,0 +1,35 @@
+D:\comsistems\bin\Debug\compravent.exe
+D:\comsistems\bin\Debug\compravent.pdb
+D:\comsistems\bin\Debug\compravent.xml
+D:\comsistems\obj\x86\Debug\compravent.Resources.resources
+D:\comsistems\obj\x86\Debug\compravent.vbproj.GenerateResource.Cache
+D:\comsistems\obj\x86\Debug\compravent.exe
+D:\comsistems\obj\x86\Debug\compravent.xml
+D:\comsistems\obj\x86\Debug\compravent.pdb
+D:\compravent\compravent\obj\x86\Debug\compravent.exe
+D:\compravent\compravent\obj\x86\Debug\compravent.xml
+D:\compravent\compravent\obj\x86\Debug\compravent.pdb
+D:\compravent\compravent\bin\Debug\compravent.exe
+D:\compravent\compravent\bin\Debug\compravent.pdb
+D:\compravent\compravent\bin\Debug\compravent.xml
+D:\compravent\compravent\obj\x86\Debug\compravent.cliente.resources
+D:\compravent\compravent\obj\x86\Debug\compravent.CMprincipal.resources
+D:\compravent\compravent\obj\x86\Debug\compravent.Resources.resources
+D:\compravent\compravent\obj\x86\Debug\compravent.vbproj.GenerateResource.Cache
+D:\compravent\compravent\obj\x86\Debug\compravent.Login.resources
+D:\compravent\compravent\obj\x86\Debug\compravent.rusuario.resources
+D:\comsistems\obj\x86\Debug\compravent.cliente.resources
+D:\comsistems\obj\x86\Debug\compravent.CMprincipal.resources
+D:\comsistems\obj\x86\Debug\compravent.Login.resources
+D:\comsistems\obj\x86\Debug\compravent.rusuario.resources
+D:\comsistems\obj\x86\Debug\compravent.Empleado.resources
+D:\comsistems\obj\x86\Debug\compravent.Pais.resources
+D:\comsistems\obj\x86\Debug\compravent.Provincia.resources
+D:\comsistems\obj\x86\Debug\compravent.Municipio.resources
+D:\comsistems\obj\x86\Debug\compravent.Sector.resources
+C:\Users\victor marine\Downloads\comsistems-master\comsistems-master\obj\x86\Debug\compravent.exe
+C:\Users\victor marine\Downloads\comsistems-master\comsistems-master\obj\x86\Debug\compravent.xml
+C:\Users\victor marine\Downloads\comsistems-master\comsistems-master\obj\x86\Debug\compravent.pdb
+D:\cmcompravent\obj\x86\Debug\compravent.exe
+D:\cmcompravent\obj\x86\Debug\compravent.xml
+D:\cmcompravent\obj\x86\Debug\compravent.pdb
