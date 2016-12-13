@@ -116,4 +116,9 @@ Public Class Empleado
         MDIprovincia()
         Me.Hide()
     End Sub
+
+    Private Sub LinkLabel3_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel3.LinkClicked
+        MDImunicipio()
+        Me.Hide()
+    End Sub
 End Class

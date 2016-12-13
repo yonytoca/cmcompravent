@@ -11,7 +11,7 @@ Module INSERTmodulo
             sql = "insert into usuario(usuario,clave,idtipousuario,idpermiso)value('" & Usuario & "', '" & Clave & "','1','1')"
             da = New MySqlDataAdapter(sql, Conex)
             dt = New DataTable
-            da.Fill(dt)
+            da.Fill(dt) 'jjjj
         Catch ex As Exception
             MsgBox(ex)
         End Try

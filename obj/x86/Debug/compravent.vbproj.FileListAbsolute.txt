@@ -33,3 +33,17 @@ C:\Users\victor marine\Downloads\comsistems-master\comsistems-master\obj\x86\Deb
 D:\cmcompravent\obj\x86\Debug\compravent.exe
 D:\cmcompravent\obj\x86\Debug\compravent.xml
 D:\cmcompravent\obj\x86\Debug\compravent.pdb
+D:\cmcompravent\bin\Debug\compravent.exe
+D:\cmcompravent\bin\Debug\compravent.pdb
+D:\cmcompravent\bin\Debug\compravent.xml
+D:\cmcompravent\obj\x86\Debug\compravent.Cliente.resources
+D:\cmcompravent\obj\x86\Debug\compravent.CMprincipal.resources
+D:\cmcompravent\obj\x86\Debug\compravent.Login.resources
+D:\cmcompravent\obj\x86\Debug\compravent.Empleado.resources
+D:\cmcompravent\obj\x86\Debug\compravent.Municipio.resources
+D:\cmcompravent\obj\x86\Debug\compravent.Pais.resources
+D:\cmcompravent\obj\x86\Debug\compravent.Provincia.resources
+D:\cmcompravent\obj\x86\Debug\compravent.Sector.resources
+D:\cmcompravent\obj\x86\Debug\compravent.Resources.resources
+D:\cmcompravent\obj\x86\Debug\compravent.rusuario.resources
+D:\cmcompravent\obj\x86\Debug\compravent.vbproj.GenerateResource.Cache
