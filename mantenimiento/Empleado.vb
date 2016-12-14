@@ -10,18 +10,18 @@ Public Class Empleado
     Dim sql As String
     Dim comando As MySqlCommand
     Public Sub RecogerVariables()
-        'Nombre = txtnombreEm.Text
-        'Apellido = txtapellidoEm.Text
-        'Cedula = txtcedulaEm.Text
-        'Telefono = txttelefonoEm.Text
-        'Calle = txtcalleEm.Text
-        'Casa = txtcasaEm.Text
+        Nombre = txtnombreEm.Text
+        Apellido = txtapellidoEm.Text
+        Cedula = txtcedulaEm.Text
+        Telefono = txttelefonoEm.Text
+        Calle = txtcalleEm.Text
+        Casa = txtcasaEm.Text
         Usuario = txtusuarioEm.Text
         Clave = txtclaveEm.Text
-        'Pais = cbpais.Text
-        'Provinvia = cbprovincia.Text
-        'Municipio = cbmunicipio.Text
-        'Sector = cbsector.Text
+        Pais = Val(cbpais.Text).ToString
+        Provinvia = Val(cbprovincia.Text).ToString
+        Municipio = Val(cbmunicipio.Text).ToString
+        Sector = Val(cbsector.Text).ToString
         Try
             sql = "insert into usuario(usuario,clave,idtipousuario,idpermiso)value('" & Usuario & "', '" & Clave & "','1','1')"
             da = New MySqlDataAdapter(sql, Conex)
@@ -104,7 +104,7 @@ Public Class Empleado
 
     Private Sub btnGuardarEm_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnGuardarEm.Click
         RecogerVariables()
-
+        InsertDireccion(Pais, Provinvia, Municipio, Sector, Calle, Casa)
     End Sub
 
     Private Sub LinkLabel1_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked

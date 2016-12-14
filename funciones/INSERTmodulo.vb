@@ -59,5 +59,17 @@ Module INSERTmodulo
 
         End Try
     End Sub
+
+    Sub InsertDireccion(ByVal V1, ByVal V2, ByVal V3, ByVal v4, ByVal v5, ByVal v6)
+        Try
+            sql = "insert into direccion(idpais,idprovincia,idmunicipio,idsector,calle,casa_numero)value('" & V1 & "', '" & V2 & "','" & V3 & "','" & V4 & "', '" & V5 & "','" & V6 & "')"
+            da = New MySqlDataAdapter(sql, Conex)
+            dt = New DataTable
+            da.Fill(dt)
+
+        Catch ex As Exception
+
+        End Try
+    End Sub
 End Module
 
