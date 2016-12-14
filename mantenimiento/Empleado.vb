@@ -18,6 +18,7 @@ Public Class Empleado
         Casa = txtcasaEm.Text
         Usuario = txtusuarioEm.Text
         Clave = txtclaveEm.Text
+<<<<<<< HEAD
         Pais = Val(cbpais.Text).ToString
         Provinvia = Val(cbprovincia.Text).ToString
         Municipio = Val(cbmunicipio.Text).ToString
@@ -37,6 +38,13 @@ Public Class Empleado
 
         End Try
 
+=======
+        'Pais = cbpais.Text
+        'Provinvia = cbprovincia.Text
+        'Municipio = cbmunicipio.Text
+        'Sector = cbsector.Text
+        
+>>>>>>> origin/master
     End Sub
     Public Sub ListaPais()
         Dim DA As New MySqlDataAdapter

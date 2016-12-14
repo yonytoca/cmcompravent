@@ -311,7 +311,7 @@ Partial Class CMprincipal
         '
         Me.OptionsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EmpleadoToolStripMenuItem, Me.ClienteToolStripMenuItem, Me.ProveedorToolStripMenuItem, Me.EmpresaToolStripMenuItem, Me.DireccionToolStripMenuItem, Me.TelefonoToolStripMenuItem, Me.ProductoToolStripMenuItem})
         Me.OptionsToolStripMenuItem.Name = "OptionsToolStripMenuItem"
-        Me.OptionsToolStripMenuItem.Size = New System.Drawing.Size(77, 22)
+        Me.OptionsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.OptionsToolStripMenuItem.Text = "."
         '
         'EmpleadoToolStripMenuItem
