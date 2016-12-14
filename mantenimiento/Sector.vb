@@ -33,7 +33,14 @@ Public Class Sector
         End Try
     End Sub
     Private Sub btnguardarPro_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnguardarPro.Click
+<<<<<<< HEAD
         RecogerVariables()
+=======
+        Nombre = txtsector.Text
+        Nota = txtnota.Text
+        Municipio = Val(cbmunicipio.Text).ToString
+        InsertSector(Nombre, Nota, Municipio)
+>>>>>>> origin/master
         MDIempleado()
         Me.Hide()
     End Sub
