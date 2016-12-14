@@ -22,21 +22,7 @@ Public Class Empleado
         'Provinvia = cbprovincia.Text
         'Municipio = cbmunicipio.Text
         'Sector = cbsector.Text
-        Try
-            sql = "insert into usuario(usuario,clave,idtipousuario,idpermiso)value('" & Usuario & "', '" & Clave & "','1','1')"
-            da = New MySqlDataAdapter(sql, Conex)
-            dt = New DataTable
-            da.Fill(dt)
-            'Datos.DataSource = dt
-            MsgBox("Datos almacenados con exito")
-        Catch ex As Exception
-            MsgBox(ex.Message)
-
-            MsgBox("Los campos estan vacios")
-            'MsgBox(Nombre + Apellido)
-
-        End Try
-
+        
     End Sub
     Public Sub ListaPais()
         Dim DA As New MySqlDataAdapter

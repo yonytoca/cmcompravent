@@ -59,5 +59,18 @@ Module INSERTmodulo
 
         End Try
     End Sub
+
+    Sub InsertPersona(ByVal V1, ByVal V2, ByVal V3, ByVal V4, ByVal V5, ByVal V6)
+        Try
+            sql = "insert into persona(nombre,apellido,cedula,iddireccion,idtelefono,idtipopersona)value('" & V1 & "', '" & V2 & "','" & V3 & "','" & V4 & "','" & V5 & "','" & V6 & "')"
+            da = New MySqlDataAdapter(sql, Conex)
+            dt = New DataTable
+            da.Fill(dt)
+            MsgBox("Datos Almacenados Con exito")
+        Catch ex As Exception
+            MsgBox(ex)
+        End Try
+
+    End Sub
 End Module
 
