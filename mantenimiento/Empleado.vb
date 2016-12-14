@@ -70,7 +70,7 @@ Public Class Empleado
         Dim DA As New MySqlDataAdapter
         Dim DT As New DataTable
         Try
-            DA = New MySqlDataAdapter("select * from minicipio", Conex)
+            DA = New MySqlDataAdapter("select * from municipio", Conex)
             DA.Fill(DT)
             cbmunicipio.DataSource = DT
             cbmunicipio.DisplayMember = "nombre"

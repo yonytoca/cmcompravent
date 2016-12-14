@@ -47,4 +47,15 @@ Module INSERTmodulo
 
         End Try
     End Sub
+    Sub Insertmunicipio(ByVal V1, ByVal V2, ByVal V3)
+        Try
+            sql = "insert into municipio(nombre,comentario,idprovincia)value('" & V1 & "', '" & V2 & "','" & V3 & "')"
+            da = New MySqlDataAdapter(sql, Conex)
+            dt = New DataTable
+            da.Fill(dt)
+
+        Catch ex As Exception
+
+        End Try
+    End Sub
 End Module

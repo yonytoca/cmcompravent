@@ -76,6 +76,7 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="funciones\INSERTmodulo.vb" />
     <Compile Include="funciones\MDImodulo.vb" />
     <Compile Include="mantenimiento\cliente.Designer.vb">
       <DependentUpon>cliente.vb</DependentUpon>
