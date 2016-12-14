@@ -27,7 +27,6 @@ Public Class Sector
         Nombre = txtsector.Text
         Nota = txtnota.Text
         Municipio = Val(cbmunicipio.Text).ToString
-
         InsertSector(Nombre, Nota, Municipio)
         MDIempleado()
         Me.Hide()

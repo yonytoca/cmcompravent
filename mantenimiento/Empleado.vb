@@ -18,18 +18,15 @@ Public Class Empleado
         Casa = txtcasaEm.Text
         Usuario = txtusuarioEm.Text
         Clave = txtclaveEm.Text
-
         Pais = Val(cbpais.Text).ToString
         Provinvia = Val(cbprovincia.Text).ToString
         Municipio = Val(cbmunicipio.Text).ToString
         Sector = Val(cbsector.Text).ToString
+
         Try
-            sql = "insert into usuario(usuario,clave,idtipousuario,idpermiso)value('" & Usuario & "', '" & Clave & "','1','1')"
-            da = New MySqlDataAdapter(sql, Conex)
-            dt = New DataTable
-        da.Fill(dt)
-        'Datos.DataSource = dt
-        MsgBox("Datos almacenados con exito")
+            insertUsuario(Usuario, Clave)
+            InsertDireccion(Pais, Provinvia, Municipio, Sector, Calle, Casa)
+            MsgBox("Datos almacenados con exito")
         Catch ex As Exception
             MsgBox(ex.Message)
 
@@ -37,13 +34,7 @@ Public Class Empleado
             'MsgBox(Nombre + Apellido)
 
         End Try
-
-
-        'Pais = cbpais.Text
-        'Provinvia = cbprovincia.Text
-        'Municipio = cbmunicipio.Text
-        'Sector = cbsector.Text
-
+   
 
     End Sub
     Public Sub ListaPais()
@@ -113,6 +104,7 @@ Public Class Empleado
     Private Sub btnGuardarEm_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnGuardarEm.Click
         RecogerVariables()
         InsertDireccion(Pais, Provinvia, Municipio, Sector, Calle, Casa)
+
     End Sub
 
     Private Sub LinkLabel1_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
