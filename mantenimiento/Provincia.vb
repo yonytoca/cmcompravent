@@ -30,7 +30,7 @@ Public Class Provincia
         'Casa = txtcasaEm.Text
         Nombre = txtnombrePro.Text
         Nota = txtnotaPro.Text
-        Pais = Val(cbpais.Text).ToString
+        Pais = cbpais.SelectedValue
         'Provinvia = cbprovincia.Text
         'Municipio = cbmunicipio.Text
         'Sector = cbsector.Text
