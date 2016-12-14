@@ -55,7 +55,7 @@ Partial Class Sector
         Me.btncancelar.Name = "btncancelar"
         Me.btncancelar.Size = New System.Drawing.Size(75, 23)
         Me.btncancelar.TabIndex = 7
-        Me.btncancelar.Text = "Button2"
+        Me.btncancelar.Text = "Cancelar"
         Me.btncancelar.UseVisualStyleBackColor = True
         '
         'btnguardarPro

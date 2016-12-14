@@ -11,12 +11,12 @@ Module INSERTmodulo
             sql = "insert into usuario(usuario,clave,idtipousuario,idpermiso)value('" & Usuario & "', '" & Clave & "','1','1')"
             da = New MySqlDataAdapter(sql, Conex)
             dt = New DataTable
-            da.Fill(dt)
+            da.Fill(dt) 'jjjj
         Catch ex As Exception
             MsgBox(ex)
         End Try
     End Sub
-    Sub insertSector(ByVal V1, ByVal V2, ByVal V3)
+    Sub InsertSector(ByVal V1, ByVal V2, ByVal V3)
         Try
             sql = "insert into sector(nombre,comentario,idmunicipio)value('" & V1 & "','" & V2 & "','" & V3 & "')"
             da = New MySqlDataAdapter(sql, Conex)
@@ -38,7 +38,7 @@ Module INSERTmodulo
     End Sub
     Sub InsertProvincia(ByVal V1, ByVal V2, ByVal V3)
         Try
-            sql = "insert into provincia(nombre,comentario,idpais)value('" & V1 & "', '" & V2 & "','" & V3 & "')"
+            sql = "insert into provincia(nombre,comentario,idpais)value('" & V1 & "', '" & V2 & "','" & v3 & "')"
             da = New MySqlDataAdapter(sql, Conex)
             dt = New DataTable
             da.Fill(dt)
@@ -47,4 +47,4 @@ Module INSERTmodulo
 
         End Try
     End Sub
-    End Module
+End Module

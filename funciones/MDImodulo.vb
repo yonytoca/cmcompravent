@@ -19,5 +19,10 @@
         frmmunicipio.MdiParent = CMprincipal
         frmmunicipio.Show()
     End Sub
+    Sub MDIsector()
+        Dim frmsector As New Sector
+        frmsector.MdiParent = CMprincipal
+        frmsector.Show()
+    End Sub
 
 End Module

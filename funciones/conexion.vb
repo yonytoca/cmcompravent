@@ -2,6 +2,7 @@
 Imports MySql.Data.MySqlClient
 
 Module conexion
+
     Public Conex As New MySqlConnection
 
     Sub Conectar()
