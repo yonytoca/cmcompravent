@@ -4,7 +4,8 @@ Imports System.Data.OleDb
 
 Public Class Empleado
     Dim Nombre, Apellido, Cedula, Telefono, Calle, Casa, Usuario, Clave As String
-    Dim Pais, Provinvia, Municipio, Sector As Integer
+    Dim Pais, Provinvia As Integer
+    Dim Municipio, Sector As Integer
     Dim da As MySqlDataAdapter
     Dim dt As DataTable
     Dim sql As String
@@ -18,10 +19,10 @@ Public Class Empleado
         Casa = txtcasaEm.Text
         Usuario = txtusuarioEm.Text
         Clave = txtclaveEm.Text
-        Pais = Val(cbpais.Text).ToString
-        Provinvia = Val(cbprovincia.Text).ToString
-        Municipio = Val(cbmunicipio.Text).ToString
-        Sector = Val(cbsector.Text).ToString
+        Pais = cbpais.SelectedValue
+        Provinvia = cbprovincia.SelectedValue
+        Municipio = cbmunicipio.SelectedValue
+        Sector = cbsector.SelectedValue
 
         Try
             insertUsuario(Usuario, Clave)
@@ -102,8 +103,8 @@ Public Class Empleado
     End Sub
 
     Private Sub btnGuardarEm_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnGuardarEm.Click
+
         RecogerVariables()
-        InsertDireccion(Pais, Provinvia, Municipio, Sector, Calle, Casa)
 
     End Sub
 
