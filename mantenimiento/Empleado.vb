@@ -18,7 +18,6 @@ Public Class Empleado
         Casa = txtcasaEm.Text
         Usuario = txtusuarioEm.Text
         Clave = txtclaveEm.Text
-
         Pais = Val(cbpais.Text).ToString
         Provinvia = Val(cbprovincia.Text).ToString
         Municipio = Val(cbmunicipio.Text).ToString
@@ -27,9 +26,9 @@ Public Class Empleado
             sql = "insert into usuario(usuario,clave,idtipousuario,idpermiso)value('" & Usuario & "', '" & Clave & "','1','1')"
             da = New MySqlDataAdapter(sql, Conex)
             dt = New DataTable
-        da.Fill(dt)
-        'Datos.DataSource = dt
-        MsgBox("Datos almacenados con exito")
+            da.Fill(dt)
+            'Datos.DataSource = dt
+            MsgBox("Datos almacenados con exito")
         Catch ex As Exception
             MsgBox(ex.Message)
 

@@ -27,27 +27,17 @@ Public Class Municipio
         Me.Close()
     End Sub
     Public Sub RecogerVariables()
-        'Nombre = txtnombreEm.Text
-        'Apellido = txtapellidoEm.Text
-        'Cedula = txtcedulaEm.Text
-        'Telefono = txttelefonoEm.Text
-        'Calle = txtcalleEm.Text
-        'Casa = txtcasaEm.Text
         Nombre = txtnombreMc.Text
         Nota = txtnotaMc.Text
-        Provincia = Val(cbprovinciaMc.Text).ToString
-        'Provinvia = cbprovincia.Text
-        'Municipio = cbmunicipio.Text
-        'Sector = cbsector.Text
+        Provincia = cbprovinciaMc.SelectedValue
         Try
             Insertmunicipio(Nombre, Nota, Provincia)
-            MsgBox("Datos almacenados con exito")
+            ' MsgBox("Datos almacenados con exito")
         Catch ex As Exception
             MsgBox(ex.Message)
 
-            MsgBox("Los campos estan vacios")
+            MsgBox("Existen campos vacios")
             'MsgBox(Nombre + Apellido)
-
         End Try
 
     End Sub
