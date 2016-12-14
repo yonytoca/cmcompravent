@@ -72,9 +72,9 @@ Module INSERTmodulo
 
         End Try
     End Sub
- Sub InsertPersona(ByVal V1, ByVal V2, ByVal V3, ByVal V4, ByVal V5, ByVal V6)
+    Sub InsertPersona(ByVal V1, ByVal V2, ByVal V3, ByVal V4)
         Try
-            sql = "insert into persona(nombre,apellido,cedula,iddireccion,idtelefono,idtipopersona)value('" & V1 & "', '" & V2 & "','" & V3 & "','" & V4 & "','" & V5 & "','" & V6 & "')"
+            sql = "insert into persona(nombre,apellido,cedula,idtelefono)value('" & V1 & "', '" & V2 & "','" & V3 & "','" & V4 & "')"
             da = New MySqlDataAdapter(sql, Conex)
             dt = New DataTable
             da.Fill(dt)

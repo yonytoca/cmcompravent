@@ -10,6 +10,7 @@ Public Class Empleado
     Dim dt As DataTable
     Dim sql As String
     Dim comando As MySqlCommand
+
     Public Sub RecogerVariables()
         Nombre = txtnombreEm.Text
         Apellido = txtapellidoEm.Text
@@ -25,15 +26,9 @@ Public Class Empleado
         Sector = cbsector.SelectedValue
 
         Try
-
-            sql = "insert into usuario(usuario,clave,idtipousuario,idpermiso)value('" & Usuario & "', '" & Clave & "','1','1')"
-            da = New MySqlDataAdapter(sql, Conex)
-            dt = New DataTable
-            da.Fill(dt)
-            'Datos.DataSource = dt
             insertUsuario(Usuario, Clave)
             InsertDireccion(Pais, Provinvia, Municipio, Sector, Calle, Casa)
-
+            InsertPersona(Nombre, Apellido, Cedula, Telefono)
             MsgBox("Datos almacenados con exito")
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -42,7 +37,7 @@ Public Class Empleado
             'MsgBox(Nombre + Apellido)
 
         End Try
-   
+
 
     End Sub
     Public Sub ListaPais()
@@ -91,7 +86,7 @@ Public Class Empleado
         Dim DA As New MySqlDataAdapter
         Dim DT As New DataTable
         Try
-            DA = New MySqlDataAdapter("select * from sector", Conex)
+            DA = New MySqlDataAdapter("select * from municipio", Conex)
             DA.Fill(DT)
             cbsector.DataSource = DT
             cbsector.DisplayMember = "nombre"
