@@ -26,14 +26,8 @@ Public Class Empleado
 
         Try
 
-            sql = "insert into usuario(usuario,clave,idtipousuario,idpermiso)value('" & Usuario & "', '" & Clave & "','1','1')"
-            da = New MySqlDataAdapter(sql, Conex)
-            dt = New DataTable
-            da.Fill(dt)
-            'Datos.DataSource = dt
             insertUsuario(Usuario, Clave)
             InsertDireccion(Pais, Provinvia, Municipio, Sector, Calle, Casa)
-
             MsgBox("Datos almacenados con exito")
         Catch ex As Exception
             MsgBox(ex.Message)
