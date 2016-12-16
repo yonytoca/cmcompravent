@@ -47,5 +47,4 @@ D:\cmcompravent\obj\x86\Debug\compravent.Sector.resources
 D:\cmcompravent\obj\x86\Debug\compravent.Resources.resources
 D:\cmcompravent\obj\x86\Debug\compravent.rusuario.resources
 D:\cmcompravent\obj\x86\Debug\compravent.vbproj.GenerateResource.Cache
-D:\cmcompravent\bin\Debug\MySql.Data.dll
 D:\cmcompravent\obj\x86\Debug\compravent.vbprojResolveAssemblyReference.cache

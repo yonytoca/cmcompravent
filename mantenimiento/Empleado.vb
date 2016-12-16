@@ -29,18 +29,16 @@ Public Class Empleado
         IdTelefono = ultimoIdT()
 
         Try
-<<<<<<< HEAD
+
 
             insertUsuario(Usuario, Clave)
-            InsertDireccion(Pais, Provinvia, Municipio, Sector, Calle, Casa)
-=======
             InsertDireccion(Pais, Provinvia, Municipio, Sector, Calle, Casa)
             InsertTelefono(Telefono, TipoTelefono)
             insertUsuario(Usuario, Clave)
             InsertPersona(Nombre, Apellido, Cedula, IdDireccion, IdTelefono)
             ' InsertTipotelefono(TipoTelefono)
 
->>>>>>> origin/master
+
             MsgBox("Datos almacenados con exito")
         Catch ex As Exception
             MsgBox(ex.Message)
