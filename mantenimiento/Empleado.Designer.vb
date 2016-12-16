@@ -22,6 +22,7 @@ Partial Class Empleado
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Empleado))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -55,66 +56,46 @@ Partial Class Empleado
         Me.txtusuarioEm = New System.Windows.Forms.TextBox()
         Me.btnGuardarEm = New System.Windows.Forms.Button()
         Me.btnCancelarEm = New System.Windows.Forms.Button()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.cbTipoTelefono = New System.Windows.Forms.ComboBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(33, 21)
+        resources.ApplyResources(Me.Label1, "Label1")
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(44, 13)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Nombre"
         '
         'Label5
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(33, 50)
+        resources.ApplyResources(Me.Label5, "Label5")
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(44, 13)
-        Me.Label5.TabIndex = 4
-        Me.Label5.Text = "Apellido"
         '
         'Label6
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(33, 76)
+        resources.ApplyResources(Me.Label6, "Label6")
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(40, 13)
-        Me.Label6.TabIndex = 5
-        Me.Label6.Text = "Cedula"
         '
         'Label8
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(315, 199)
+        resources.ApplyResources(Me.Label8, "Label8")
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(44, 13)
-        Me.Label8.TabIndex = 7
-        Me.Label8.Text = "Nombre"
         '
         'txtnombreEm
         '
-        Me.txtnombreEm.Location = New System.Drawing.Point(115, 14)
+        resources.ApplyResources(Me.txtnombreEm, "txtnombreEm")
         Me.txtnombreEm.Name = "txtnombreEm"
-        Me.txtnombreEm.Size = New System.Drawing.Size(122, 20)
-        Me.txtnombreEm.TabIndex = 8
         '
         'txtapellidoEm
         '
-        Me.txtapellidoEm.Location = New System.Drawing.Point(115, 43)
+        resources.ApplyResources(Me.txtapellidoEm, "txtapellidoEm")
         Me.txtapellidoEm.Name = "txtapellidoEm"
-        Me.txtapellidoEm.Size = New System.Drawing.Size(171, 20)
-        Me.txtapellidoEm.TabIndex = 9
         '
         'txtcedulaEm
         '
-        Me.txtcedulaEm.Location = New System.Drawing.Point(115, 69)
+        resources.ApplyResources(Me.txtcedulaEm, "txtcedulaEm")
         Me.txtcedulaEm.Name = "txtcedulaEm"
-        Me.txtcedulaEm.Size = New System.Drawing.Size(122, 20)
-        Me.txtcedulaEm.TabIndex = 10
         '
         'GroupBox1
         '
@@ -134,168 +115,107 @@ Partial Class Empleado
         Me.GroupBox1.Controls.Add(Me.cbmunicipio)
         Me.GroupBox1.Controls.Add(Me.cbprovincia)
         Me.GroupBox1.Controls.Add(Me.cbpais)
-        Me.GroupBox1.Location = New System.Drawing.Point(36, 123)
+        resources.ApplyResources(Me.GroupBox1, "GroupBox1")
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(586, 168)
-        Me.GroupBox1.TabIndex = 12
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Dirección"
         '
         'LinkLabel4
         '
-        Me.LinkLabel4.AutoSize = True
-        Me.LinkLabel4.Location = New System.Drawing.Point(217, 118)
+        resources.ApplyResources(Me.LinkLabel4, "LinkLabel4")
         Me.LinkLabel4.Name = "LinkLabel4"
-        Me.LinkLabel4.Size = New System.Drawing.Size(29, 13)
-        Me.LinkLabel4.TabIndex = 15
         Me.LinkLabel4.TabStop = True
-        Me.LinkLabel4.Text = "New"
         '
         'LinkLabel3
         '
-        Me.LinkLabel3.AutoSize = True
-        Me.LinkLabel3.Location = New System.Drawing.Point(217, 90)
+        resources.ApplyResources(Me.LinkLabel3, "LinkLabel3")
         Me.LinkLabel3.Name = "LinkLabel3"
-        Me.LinkLabel3.Size = New System.Drawing.Size(29, 13)
-        Me.LinkLabel3.TabIndex = 14
         Me.LinkLabel3.TabStop = True
-        Me.LinkLabel3.Text = "New"
         '
         'LinkLabel2
         '
-        Me.LinkLabel2.AutoSize = True
-        Me.LinkLabel2.Location = New System.Drawing.Point(217, 58)
+        resources.ApplyResources(Me.LinkLabel2, "LinkLabel2")
         Me.LinkLabel2.Name = "LinkLabel2"
-        Me.LinkLabel2.Size = New System.Drawing.Size(29, 13)
-        Me.LinkLabel2.TabIndex = 13
         Me.LinkLabel2.TabStop = True
-        Me.LinkLabel2.Text = "New"
         '
         'LinkLabel1
         '
-        Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.Location = New System.Drawing.Point(341, 27)
+        resources.ApplyResources(Me.LinkLabel1, "LinkLabel1")
         Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(29, 13)
-        Me.LinkLabel1.TabIndex = 12
         Me.LinkLabel1.TabStop = True
-        Me.LinkLabel1.Text = "New"
         '
         'Label3
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(347, 111)
+        resources.ApplyResources(Me.Label3, "Label3")
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(31, 13)
-        Me.Label3.TabIndex = 11
-        Me.Label3.Text = "Casa"
         '
         'txtcasaEm
         '
-        Me.txtcasaEm.Location = New System.Drawing.Point(397, 111)
+        resources.ApplyResources(Me.txtcasaEm, "txtcasaEm")
         Me.txtcasaEm.Name = "txtcasaEm"
-        Me.txtcasaEm.Size = New System.Drawing.Size(100, 20)
-        Me.txtcasaEm.TabIndex = 10
         '
         'Label2
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(348, 69)
+        resources.ApplyResources(Me.Label2, "Label2")
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(30, 13)
-        Me.Label2.TabIndex = 9
-        Me.Label2.Text = "Calle"
         '
         'txtcalleEm
         '
-        Me.txtcalleEm.Location = New System.Drawing.Point(397, 69)
+        resources.ApplyResources(Me.txtcalleEm, "txtcalleEm")
         Me.txtcalleEm.Name = "txtcalleEm"
-        Me.txtcalleEm.Size = New System.Drawing.Size(100, 20)
-        Me.txtcalleEm.TabIndex = 8
         '
         'Label12
         '
-        Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(23, 126)
+        resources.ApplyResources(Me.Label12, "Label12")
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(38, 13)
-        Me.Label12.TabIndex = 7
-        Me.Label12.Text = "Sector"
         '
         'Label11
         '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(23, 90)
+        resources.ApplyResources(Me.Label11, "Label11")
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(52, 13)
-        Me.Label11.TabIndex = 6
-        Me.Label11.Text = "Municipio"
         '
         'Label10
         '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(23, 55)
+        resources.ApplyResources(Me.Label10, "Label10")
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(51, 13)
-        Me.Label10.TabIndex = 5
-        Me.Label10.Text = "Provincia"
         '
         'Label9
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(23, 27)
+        resources.ApplyResources(Me.Label9, "Label9")
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(27, 13)
-        Me.Label9.TabIndex = 4
-        Me.Label9.Text = "Pais"
         '
         'cbsector
         '
         Me.cbsector.FormattingEnabled = True
-        Me.cbsector.Location = New System.Drawing.Point(90, 118)
+        resources.ApplyResources(Me.cbsector, "cbsector")
         Me.cbsector.Name = "cbsector"
-        Me.cbsector.Size = New System.Drawing.Size(121, 21)
-        Me.cbsector.TabIndex = 3
         '
         'cbmunicipio
         '
         Me.cbmunicipio.FormattingEnabled = True
-        Me.cbmunicipio.Location = New System.Drawing.Point(90, 87)
+        resources.ApplyResources(Me.cbmunicipio, "cbmunicipio")
         Me.cbmunicipio.Name = "cbmunicipio"
-        Me.cbmunicipio.Size = New System.Drawing.Size(121, 21)
-        Me.cbmunicipio.TabIndex = 2
         '
         'cbprovincia
         '
         Me.cbprovincia.FormattingEnabled = True
-        Me.cbprovincia.Location = New System.Drawing.Point(90, 55)
+        resources.ApplyResources(Me.cbprovincia, "cbprovincia")
         Me.cbprovincia.Name = "cbprovincia"
-        Me.cbprovincia.Size = New System.Drawing.Size(121, 21)
-        Me.cbprovincia.TabIndex = 1
         '
         'cbpais
         '
         Me.cbpais.FormattingEnabled = True
-        Me.cbpais.Location = New System.Drawing.Point(90, 19)
+        resources.ApplyResources(Me.cbpais, "cbpais")
         Me.cbpais.Name = "cbpais"
-        Me.cbpais.Size = New System.Drawing.Size(245, 21)
-        Me.cbpais.TabIndex = 0
         '
         'Label4
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(28, 101)
+        resources.ApplyResources(Me.Label4, "Label4")
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(49, 13)
-        Me.Label4.TabIndex = 13
-        Me.Label4.Text = "Telefono"
         '
         'txttelefonoEm
         '
-        Me.txttelefonoEm.Location = New System.Drawing.Point(115, 98)
+        resources.ApplyResources(Me.txttelefonoEm, "txttelefonoEm")
         Me.txttelefonoEm.Name = "txttelefonoEm"
-        Me.txttelefonoEm.Size = New System.Drawing.Size(122, 20)
-        Me.txttelefonoEm.TabIndex = 14
         '
         'GroupBox2
         '
@@ -303,68 +223,59 @@ Partial Class Empleado
         Me.GroupBox2.Controls.Add(Me.Label13)
         Me.GroupBox2.Controls.Add(Me.txtclaveEm)
         Me.GroupBox2.Controls.Add(Me.txtusuarioEm)
-        Me.GroupBox2.Location = New System.Drawing.Point(346, 21)
+        resources.ApplyResources(Me.GroupBox2, "GroupBox2")
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(276, 103)
-        Me.GroupBox2.TabIndex = 15
         Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Usuario"
         '
         'Label7
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(24, 19)
+        resources.ApplyResources(Me.Label7, "Label7")
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(43, 13)
-        Me.Label7.TabIndex = 12
-        Me.Label7.Text = "Usuario"
         '
         'Label13
         '
-        Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(24, 59)
+        resources.ApplyResources(Me.Label13, "Label13")
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(34, 13)
-        Me.Label13.TabIndex = 13
-        Me.Label13.Text = "Clave"
         '
         'txtclaveEm
         '
-        Me.txtclaveEm.Location = New System.Drawing.Point(87, 56)
+        resources.ApplyResources(Me.txtclaveEm, "txtclaveEm")
         Me.txtclaveEm.Name = "txtclaveEm"
-        Me.txtclaveEm.Size = New System.Drawing.Size(100, 20)
-        Me.txtclaveEm.TabIndex = 1
         '
         'txtusuarioEm
         '
-        Me.txtusuarioEm.Location = New System.Drawing.Point(87, 19)
+        resources.ApplyResources(Me.txtusuarioEm, "txtusuarioEm")
         Me.txtusuarioEm.Name = "txtusuarioEm"
-        Me.txtusuarioEm.Size = New System.Drawing.Size(100, 20)
-        Me.txtusuarioEm.TabIndex = 0
         '
         'btnGuardarEm
         '
-        Me.btnGuardarEm.Location = New System.Drawing.Point(228, 297)
+        resources.ApplyResources(Me.btnGuardarEm, "btnGuardarEm")
         Me.btnGuardarEm.Name = "btnGuardarEm"
-        Me.btnGuardarEm.Size = New System.Drawing.Size(75, 23)
-        Me.btnGuardarEm.TabIndex = 16
-        Me.btnGuardarEm.Text = "Guardar"
         Me.btnGuardarEm.UseVisualStyleBackColor = True
         '
         'btnCancelarEm
         '
-        Me.btnCancelarEm.Location = New System.Drawing.Point(346, 297)
+        resources.ApplyResources(Me.btnCancelarEm, "btnCancelarEm")
         Me.btnCancelarEm.Name = "btnCancelarEm"
-        Me.btnCancelarEm.Size = New System.Drawing.Size(75, 23)
-        Me.btnCancelarEm.TabIndex = 17
-        Me.btnCancelarEm.Text = "Cancelar"
         Me.btnCancelarEm.UseVisualStyleBackColor = True
+        '
+        'Label14
+        '
+        resources.ApplyResources(Me.Label14, "Label14")
+        Me.Label14.Name = "Label14"
+        '
+        'cbTipoTelefono
+        '
+        Me.cbTipoTelefono.FormattingEnabled = True
+        resources.ApplyResources(Me.cbTipoTelefono, "cbTipoTelefono")
+        Me.cbTipoTelefono.Name = "cbTipoTelefono"
         '
         'Empleado
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(630, 343)
+        Me.Controls.Add(Me.cbTipoTelefono)
+        Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.btnCancelarEm)
         Me.Controls.Add(Me.btnGuardarEm)
         Me.Controls.Add(Me.GroupBox2)
@@ -378,8 +289,9 @@ Partial Class Empleado
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label1)
+        Me.DoubleBuffered = True
         Me.Name = "Empleado"
-        Me.Text = "Empleado"
+        Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
@@ -421,4 +333,6 @@ Partial Class Empleado
     Friend WithEvents LinkLabel3 As System.Windows.Forms.LinkLabel
     Friend WithEvents LinkLabel2 As System.Windows.Forms.LinkLabel
     Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
+    Friend WithEvents Label14 As System.Windows.Forms.Label
+    Friend WithEvents cbTipoTelefono As System.Windows.Forms.ComboBox
 End Class

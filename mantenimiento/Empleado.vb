@@ -4,8 +4,8 @@ Imports System.Data.OleDb
 
 Public Class Empleado
     Dim Nombre, Apellido, Cedula, Telefono, Calle, Casa, Usuario, Clave As String
-    Dim Pais, Provinvia As Integer
-    Dim Municipio, Sector As Integer
+    Dim Pais, Provinvia, IdDireccion, IdTelefono As Integer
+    Dim Municipio, Sector, TipoTelefono As Integer
     Dim da As MySqlDataAdapter
     Dim dt As DataTable
     Dim sql As String
@@ -24,21 +24,23 @@ Public Class Empleado
         Provinvia = cbprovincia.SelectedValue
         Municipio = cbmunicipio.SelectedValue
         Sector = cbsector.SelectedValue
+        TipoTelefono = cbTipoTelefono.SelectedValue
+        IdDireccion = ultimoIdD()
+        IdTelefono = ultimoIdT()
 
         Try
-            insertUsuario(Usuario, Clave)
             InsertDireccion(Pais, Provinvia, Municipio, Sector, Calle, Casa)
-            InsertPersona(Nombre, Apellido, Cedula, Telefono)
+            InsertTelefono(Telefono, TipoTelefono)
+            insertUsuario(Usuario, Clave)
+            InsertPersona(Nombre, Apellido, Cedula, IdDireccion, IdTelefono)
+            ' InsertTipotelefono(TipoTelefono)
+
             MsgBox("Datos almacenados con exito")
         Catch ex As Exception
             MsgBox(ex.Message)
-
             MsgBox("Los campos estan vacios")
             'MsgBox(Nombre + Apellido)
-
         End Try
-
-
     End Sub
     Public Sub ListaPais()
         Dim DA As New MySqlDataAdapter
@@ -50,10 +52,9 @@ Public Class Empleado
             cbpais.DisplayMember = "nombre"
             cbpais.ValueMember = "idpais"
         Catch ex As Exception
-
         End Try
-
     End Sub
+
     Public Sub ListaProvincia() ' llenar lista de provincia 
         Dim DA As New MySqlDataAdapter
         Dim DT As New DataTable
@@ -66,7 +67,6 @@ Public Class Empleado
         Catch ex As Exception
 
         End Try
-
     End Sub
     Public Sub ListaMunicipio() ' llenar lista de provincia 
         Dim DA As New MySqlDataAdapter
@@ -86,22 +86,39 @@ Public Class Empleado
         Dim DA As New MySqlDataAdapter
         Dim DT As New DataTable
         Try
-            DA = New MySqlDataAdapter("select * from municipio", Conex)
+            DA = New MySqlDataAdapter("select * from sector", Conex)
             DA.Fill(DT)
             cbsector.DataSource = DT
             cbsector.DisplayMember = "nombre"
-            cbsector.ValueMember = "idmunicipio"
+            cbsector.ValueMember = "idsector"
         Catch ex As Exception
 
         End Try
 
     End Sub
+    Public Sub ListaTipoTelefono() ' llenar lista de provincia 
+        Dim DA As New MySqlDataAdapter
+        Dim DT As New DataTable
+        Try
+            DA = New MySqlDataAdapter("select * from tipotelefono", Conex)
+            DA.Fill(DT)
+            cbTipoTelefono.DataSource = DT
+            cbTipoTelefono.DisplayMember = "nombre"
+            cbTipoTelefono.ValueMember = "idtipotelefono"
+        Catch ex As Exception
+
+        End Try
+
+    End Sub
+
     Private Sub Empleado_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'Conectar()
         ListaPais()
         ListaProvincia()
         ListaMunicipio()
         ListaSector()
+        ListaTipoTelefono()
+
     End Sub
 
     Private Sub btnGuardarEm_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnGuardarEm.Click
