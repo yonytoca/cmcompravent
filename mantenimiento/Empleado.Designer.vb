@@ -49,15 +49,14 @@ Partial Class Empleado
         Me.cbpais = New System.Windows.Forms.ComboBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txttelefonoEm = New System.Windows.Forms.TextBox()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.txtclaveEm = New System.Windows.Forms.TextBox()
-        Me.txtusuarioEm = New System.Windows.Forms.TextBox()
         Me.btnGuardarEm = New System.Windows.Forms.Button()
         Me.btnCancelarEm = New System.Windows.Forms.Button()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.cbTipoTelefono = New System.Windows.Forms.ComboBox()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Tpersona2 = New System.Windows.Forms.RadioButton()
+        Me.Tpersona1 = New System.Windows.Forms.RadioButton()
+        Me.Tpersona = New System.Windows.Forms.RadioButton()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -217,36 +216,6 @@ Partial Class Empleado
         resources.ApplyResources(Me.txttelefonoEm, "txttelefonoEm")
         Me.txttelefonoEm.Name = "txttelefonoEm"
         '
-        'GroupBox2
-        '
-        Me.GroupBox2.Controls.Add(Me.Label7)
-        Me.GroupBox2.Controls.Add(Me.Label13)
-        Me.GroupBox2.Controls.Add(Me.txtclaveEm)
-        Me.GroupBox2.Controls.Add(Me.txtusuarioEm)
-        resources.ApplyResources(Me.GroupBox2, "GroupBox2")
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.TabStop = False
-        '
-        'Label7
-        '
-        resources.ApplyResources(Me.Label7, "Label7")
-        Me.Label7.Name = "Label7"
-        '
-        'Label13
-        '
-        resources.ApplyResources(Me.Label13, "Label13")
-        Me.Label13.Name = "Label13"
-        '
-        'txtclaveEm
-        '
-        resources.ApplyResources(Me.txtclaveEm, "txtclaveEm")
-        Me.txtclaveEm.Name = "txtclaveEm"
-        '
-        'txtusuarioEm
-        '
-        resources.ApplyResources(Me.txtusuarioEm, "txtusuarioEm")
-        Me.txtusuarioEm.Name = "txtusuarioEm"
-        '
         'btnGuardarEm
         '
         resources.ApplyResources(Me.btnGuardarEm, "btnGuardarEm")
@@ -270,15 +239,45 @@ Partial Class Empleado
         resources.ApplyResources(Me.cbTipoTelefono, "cbTipoTelefono")
         Me.cbTipoTelefono.Name = "cbTipoTelefono"
         '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.Tpersona2)
+        Me.GroupBox2.Controls.Add(Me.Tpersona1)
+        Me.GroupBox2.Controls.Add(Me.Tpersona)
+        resources.ApplyResources(Me.GroupBox2, "GroupBox2")
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.TabStop = False
+        '
+        'Tpersona2
+        '
+        resources.ApplyResources(Me.Tpersona2, "Tpersona2")
+        Me.Tpersona2.Name = "Tpersona2"
+        Me.Tpersona2.TabStop = True
+        Me.Tpersona2.UseVisualStyleBackColor = True
+        '
+        'Tpersona1
+        '
+        resources.ApplyResources(Me.Tpersona1, "Tpersona1")
+        Me.Tpersona1.Name = "Tpersona1"
+        Me.Tpersona1.TabStop = True
+        Me.Tpersona1.UseVisualStyleBackColor = True
+        '
+        'Tpersona
+        '
+        resources.ApplyResources(Me.Tpersona, "Tpersona")
+        Me.Tpersona.Name = "Tpersona"
+        Me.Tpersona.TabStop = True
+        Me.Tpersona.UseVisualStyleBackColor = True
+        '
         'Empleado
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.cbTipoTelefono)
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.btnCancelarEm)
         Me.Controls.Add(Me.btnGuardarEm)
-        Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.txttelefonoEm)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.GroupBox1)
@@ -322,11 +321,6 @@ Partial Class Empleado
     Friend WithEvents cbpais As System.Windows.Forms.ComboBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents txttelefonoEm As System.Windows.Forms.TextBox
-    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
-    Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents Label13 As System.Windows.Forms.Label
-    Friend WithEvents txtclaveEm As System.Windows.Forms.TextBox
-    Friend WithEvents txtusuarioEm As System.Windows.Forms.TextBox
     Friend WithEvents btnGuardarEm As System.Windows.Forms.Button
     Friend WithEvents btnCancelarEm As System.Windows.Forms.Button
     Friend WithEvents LinkLabel4 As System.Windows.Forms.LinkLabel
@@ -335,4 +329,8 @@ Partial Class Empleado
     Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
     Friend WithEvents Label14 As System.Windows.Forms.Label
     Friend WithEvents cbTipoTelefono As System.Windows.Forms.ComboBox
+    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
+    Friend WithEvents Tpersona2 As System.Windows.Forms.RadioButton
+    Friend WithEvents Tpersona1 As System.Windows.Forms.RadioButton
+    Friend WithEvents Tpersona As System.Windows.Forms.RadioButton
 End Class

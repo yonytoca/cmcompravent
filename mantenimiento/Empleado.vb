@@ -4,7 +4,7 @@ Imports System.Data.OleDb
 
 Public Class Empleado
     Dim Nombre, Apellido, Cedula, Telefono, Calle, Casa, Usuario, Clave As String
-    Dim Pais, Provinvia, IdDireccion, IdTelefono As Integer
+    Dim Pais, Provinvia, IdDireccion, IdTelefono, Tpersona0, Tpersona01, Tpersona02 As Integer
     Dim Municipio, Sector, TipoTelefono As Integer
     Dim da As MySqlDataAdapter
     Dim dt As DataTable
@@ -18,8 +18,7 @@ Public Class Empleado
         Telefono = txttelefonoEm.Text
         Calle = txtcalleEm.Text
         Casa = txtcasaEm.Text
-        Usuario = txtusuarioEm.Text
-        Clave = txtclaveEm.Text
+
         Pais = cbpais.SelectedValue
         Provinvia = cbprovincia.SelectedValue
         Municipio = cbmunicipio.SelectedValue
@@ -28,17 +27,19 @@ Public Class Empleado
         IdDireccion = ultimoIdD()
         IdTelefono = ultimoIdT()
 
+        Tpersona0 = Val(Tpersona.Text).ToString + 1
+        Tpersona01 = Val(Tpersona1.Text).ToString + 2
+        Tpersona02 = Val(Tpersona2.Text).ToString + 3
         Try
-
 
             insertUsuario(Usuario, Clave)
             InsertDireccion(Pais, Provinvia, Municipio, Sector, Calle, Casa)
             InsertTelefono(Telefono, TipoTelefono)
-            insertUsuario(Usuario, Clave)
+            '    insertUsuario(Usuario, Clave)
             InsertPersona(Nombre, Apellido, Cedula, IdDireccion, IdTelefono)
             ' InsertTipotelefono(TipoTelefono)
 
-
+            MsgBox("Los Tipos de personas " & Tpersona0, Tpersona01, Tpersona02)
             MsgBox("Datos almacenados con exito")
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -126,9 +127,7 @@ Public Class Empleado
     End Sub
 
     Private Sub btnGuardarEm_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnGuardarEm.Click
-
         RecogerVariables()
-
     End Sub
 
     Private Sub LinkLabel1_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked

@@ -95,7 +95,7 @@ Public Class CMprincipal
 
     End Sub
 
-    Private Sub ClienteToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ClienteToolStripMenuItem.Click
+    Private Sub ClienteToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Dim frmcliente As New Cliente
         frmcliente.MdiParent = Me
         frmcliente.Show()
@@ -105,19 +105,19 @@ Public Class CMprincipal
 
     End Sub
 
-    Private Sub UsuarioToolStripMenuItem1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles UsuarioToolStripMenuItem1.Click
-        Dim frmusuario As New rusuario
+    Private Sub UsuarioToolStripMenuItem1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        Dim frmusuario As New Usuario
         frmusuario.MdiParent = Me
         frmusuario.Show()
     End Sub
 
-    Private Sub ProveedorToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ProveedorToolStripMenuItem.Click
-        Dim frmusuario As New rusuario
+    Private Sub ProveedorToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+        Dim frmusuario As New Usuario
         frmusuario.MdiParent = Me
         frmusuario.Show()
     End Sub
 
-    Private Sub NuevoToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NuevoToolStripMenuItem.Click
+    Private Sub NuevoToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Dim frmempleado As New Empleado
         frmempleado.MdiParent = Me
         frmempleado.Show()

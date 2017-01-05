@@ -28,4 +28,15 @@ Module SELECTmodulo
         lector.Close()
         Return resultado + 1
     End Function
+    ' ultimo id de la factura 
+    Public Function ultimoIdF() As Integer
+        Dim query As String = "SELECT MAX(idfactura)FROM factura"
+        comando = New MySqlCommand(query, Conex)
+        lector = comando.ExecuteReader
+        If lector.Read Then
+            resultado = Val(lector(0).ToString)
+        End If
+        lector.Close()
+        Return resultado + 1
+    End Function
 End Module

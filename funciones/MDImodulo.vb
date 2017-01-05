@@ -24,5 +24,10 @@
         frmsector.MdiParent = CMprincipal
         frmsector.Show()
     End Sub
+    Sub MDIfactura()
+        Dim frmfactura As New Factura
+        frmfactura.MdiParent = CMprincipal
+        frmfactura.Show()
+    End Sub
 
 End Module
