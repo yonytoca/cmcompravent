@@ -6,7 +6,15 @@ Public Class Empleado
     Dim Nombre, Apellido, Cedula, Telefono, Calle, Casa, Usuario, Clave As String
     Dim Pais, Provinvia, IdDireccion, IdTelefono, Tpersona0, Tpersona01, Tpersona02 As Integer
     Dim Municipio, Sector, TipoTelefono As Integer
+
+
     Dim da As MySqlDataAdapter
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+
+    End Sub
+
+
     Dim dt As DataTable
     Dim sql As String
     Dim comando As MySqlCommand
@@ -27,24 +35,19 @@ Public Class Empleado
         IdDireccion = ultimoIdD()
         IdTelefono = ultimoIdT()
 
-        Tpersona0 = Val(Tpersona.Text).ToString + 1
-        Tpersona01 = Val(Tpersona1.Text).ToString + 2
-        Tpersona02 = Val(Tpersona2.Text).ToString + 3
         Try
-
-            insertUsuario(Usuario, Clave)
             InsertDireccion(Pais, Provinvia, Municipio, Sector, Calle, Casa)
             InsertTelefono(Telefono, TipoTelefono)
-            '    insertUsuario(Usuario, Clave)
-            InsertPersona(Nombre, Apellido, Cedula, IdDireccion, IdTelefono)
-            ' InsertTipotelefono(TipoTelefono)
 
-            MsgBox("Los Tipos de personas " & Tpersona0, Tpersona01, Tpersona02)
+            InsertPersona(Nombre, Apellido, Cedula, IdDireccion, IdTelefono, Tpersona0, Tpersona01, Tpersona02)
+
             MsgBox("Datos almacenados con exito")
+            Me.Close()
+            MDIempleado()
         Catch ex As Exception
             MsgBox(ex.Message)
             MsgBox("Los campos estan vacios")
-            'MsgBox(Nombre + Apellido)
+
         End Try
     End Sub
     Public Sub ListaPais()
@@ -57,7 +60,9 @@ Public Class Empleado
             cbpais.DisplayMember = "nombre"
             cbpais.ValueMember = "idpais"
         Catch ex As Exception
+
         End Try
+
     End Sub
 
     Public Sub ListaProvincia() ' llenar lista de provincia 
@@ -123,11 +128,14 @@ Public Class Empleado
         ListaMunicipio()
         ListaSector()
         ListaTipoTelefono()
-
+        mostrarlosdatos(Dgpersona)
     End Sub
 
     Private Sub btnGuardarEm_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnGuardarEm.Click
         RecogerVariables()
+        ' LimpiarVariables(Me)
+        'Me.Close()
+
     End Sub
 
     Private Sub LinkLabel1_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
@@ -148,5 +156,16 @@ Public Class Empleado
     Private Sub LinkLabel4_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel4.LinkClicked
         MDIsector()
         Me.Hide()
+    End Sub
+
+    Private Sub Dgpersona_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles Dgpersona.CellClick
+        Try
+            txtnombreEm.Text = Dgpersona.CurrentRow.Cells.Item(1).Value
+            txtapellidoEm.Text = Dgpersona.CurrentRow.Cells.Item(2).Value
+
+        Catch ex As Exception
+
+        End Try
+
     End Sub
 End Class

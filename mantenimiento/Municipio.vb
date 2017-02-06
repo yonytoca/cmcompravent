@@ -26,24 +26,19 @@ Public Class Municipio
         MDIempleado()
         Me.Close()
     End Sub
-    Public Sub RecogerVariables()
+    Public Sub Guardar()
+        'recoger variables 
         Nombre = txtnombreMc.Text
-        Nota = txtnotaMc.Text
         Provincia = cbprovinciaMc.SelectedValue
-        Try
-            Insertmunicipio(Nombre, Nota, Provincia)
-            ' MsgBox("Datos almacenados con exito")
-        Catch ex As Exception
-            MsgBox(ex.Message)
 
-            MsgBox("Existen campos vacios")
-            'MsgBox(Nombre + Apellido)
-        End Try
+        'llamar metodo
+        Insertmunicipio(Nombre, Provincia)
 
     End Sub
     Private Sub btnguardarMc_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnguardarMc.Click
-        RecogerVariables()
-        MDIempleado()
+        Guardar()
+        MDIsector()
+        Me.Hide()
     End Sub
 
     Private Sub Municipio_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load

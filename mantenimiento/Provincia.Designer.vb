@@ -29,7 +29,6 @@ Partial Class Provincia
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.cbpais = New System.Windows.Forms.ComboBox()
-        Me.txtnotaPro = New System.Windows.Forms.TextBox()
         Me.txtnombrePro = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -42,7 +41,6 @@ Partial Class Provincia
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.cbpais)
-        Me.Panel1.Controls.Add(Me.txtnotaPro)
         Me.Panel1.Controls.Add(Me.txtnombrePro)
         Me.Panel1.Location = New System.Drawing.Point(59, 46)
         Me.Panel1.Name = "Panel1"
@@ -102,13 +100,6 @@ Partial Class Provincia
         Me.cbpais.Size = New System.Drawing.Size(245, 21)
         Me.cbpais.TabIndex = 2
         '
-        'txtnotaPro
-        '
-        Me.txtnotaPro.Location = New System.Drawing.Point(85, 101)
-        Me.txtnotaPro.Name = "txtnotaPro"
-        Me.txtnotaPro.Size = New System.Drawing.Size(164, 20)
-        Me.txtnotaPro.TabIndex = 1
-        '
         'txtnombrePro
         '
         Me.txtnombrePro.Location = New System.Drawing.Point(85, 60)
@@ -130,7 +121,6 @@ Partial Class Provincia
 
     End Sub
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents txtnotaPro As System.Windows.Forms.TextBox
     Friend WithEvents txtnombrePro As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label

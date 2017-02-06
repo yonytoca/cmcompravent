@@ -45,4 +45,12 @@ Public Class Login
     Private Sub cmdSalir_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdSalir.Click
         End
     End Sub
+
+    Private Sub txtClave_TextChanged(sender As Object, e As EventArgs) Handles txtClave.TextChanged
+
+    End Sub
+
+    Private Sub txtClave_Enter(sender As Object, e As EventArgs) Handles txtClave.Enter
+
+    End Sub
 End Class

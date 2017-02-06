@@ -25,9 +25,44 @@
         frmsector.Show()
     End Sub
     Sub MDIfactura()
-        Dim frmfactura As New Factura
+        Dim frmfactura As New frmFactura
         frmfactura.MdiParent = CMprincipal
         frmfactura.Show()
+    End Sub
+    Sub MDILcliente()
+        Dim frmcliente As New Lclientes
+        frmcliente.MdiParent = CMprincipal
+        frmcliente.Show()
+    End Sub
+    Sub MDIcliente()
+        Dim frmcliente As New Cliente
+        frmcliente.MdiParent = CMprincipal
+        frmcliente.Show()
+    End Sub
+    Sub MDIusuario()
+        Dim frmusuario As New Usuario
+        frmusuario.MdiParent = CMprincipal
+        frmusuario.Show()
+    End Sub
+    Sub MDIproveedor()
+        Dim frmproveedor As New proveedor
+        frmproveedor.MdiParent = CMprincipal
+        frmproveedor.Show()
+    End Sub
+    Sub MDItipotelefono()
+        Dim frmtipotelefono As New TipoTelefono
+        frmtipotelefono.MdiParent = CMprincipal
+        frmtipotelefono.Show()
+    End Sub
+    Sub MDIempresa()
+        Dim frmempresa As New Empresa
+        frmempresa.MdiParent = CMprincipal
+        frmempresa.Show()
+    End Sub
+    Sub MDIproducto()
+        Dim frmproducto As New Producto
+        frmproducto.MdiParent = CMprincipal
+        frmproducto.Show()
     End Sub
 
 End Module

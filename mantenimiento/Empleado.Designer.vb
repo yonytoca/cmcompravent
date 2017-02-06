@@ -57,8 +57,12 @@ Partial Class Empleado
         Me.Tpersona2 = New System.Windows.Forms.RadioButton()
         Me.Tpersona1 = New System.Windows.Forms.RadioButton()
         Me.Tpersona = New System.Windows.Forms.RadioButton()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Dgpersona = New System.Windows.Forms.DataGridView()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
+        CType(Me.Dgpersona, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -269,10 +273,32 @@ Partial Class Empleado
         Me.Tpersona.TabStop = True
         Me.Tpersona.UseVisualStyleBackColor = True
         '
+        'Button1
+        '
+        resources.ApplyResources(Me.Button1, "Button1")
+        Me.Button1.Name = "Button1"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        resources.ApplyResources(Me.Button2, "Button2")
+        Me.Button2.Name = "Button2"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Dgpersona
+        '
+        Me.Dgpersona.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        resources.ApplyResources(Me.Dgpersona, "Dgpersona")
+        Me.Dgpersona.Name = "Dgpersona"
+        Me.Dgpersona.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        '
         'Empleado
         '
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.Dgpersona)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.cbTipoTelefono)
         Me.Controls.Add(Me.Label14)
@@ -295,6 +321,7 @@ Partial Class Empleado
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        CType(Me.Dgpersona, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -329,8 +356,11 @@ Partial Class Empleado
     Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
     Friend WithEvents Label14 As System.Windows.Forms.Label
     Friend WithEvents cbTipoTelefono As System.Windows.Forms.ComboBox
-    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
-    Friend WithEvents Tpersona2 As System.Windows.Forms.RadioButton
-    Friend WithEvents Tpersona1 As System.Windows.Forms.RadioButton
-    Friend WithEvents Tpersona As System.Windows.Forms.RadioButton
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents Tpersona2 As RadioButton
+    Friend WithEvents Tpersona1 As RadioButton
+    Friend WithEvents Tpersona As RadioButton
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Dgpersona As DataGridView
 End Class

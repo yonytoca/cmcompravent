@@ -13,6 +13,9 @@ Public Class CMprincipal
 
         ChildForm.Show()
     End Sub
+    Public Sub Control()
+        Dim Usu As String = Login.ScrollStateUserHasScrolled
+    End Sub
 
     Private Sub OpenFile(ByVal sender As Object, ByVal e As EventArgs) Handles OpenToolStripMenuItem.Click, OpenToolStripButton.Click
         Dim OpenFileDialog As New OpenFileDialog
@@ -106,21 +109,15 @@ Public Class CMprincipal
     End Sub
 
     Private Sub UsuarioToolStripMenuItem1_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Dim frmusuario As New Usuario
-        frmusuario.MdiParent = Me
-        frmusuario.Show()
+        MDIusuario()
     End Sub
 
     Private Sub ProveedorToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Dim frmusuario As New Usuario
-        frmusuario.MdiParent = Me
-        frmusuario.Show()
+        MDIproveedor()
     End Sub
 
     Private Sub NuevoToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Dim frmempleado As New Empleado
-        frmempleado.MdiParent = Me
-        frmempleado.Show()
+        MDIempleado()
     End Sub
 
     Protected Overrides Sub Finalize()
@@ -130,5 +127,53 @@ Public Class CMprincipal
 
     Private Sub CMprincipal_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
         End
+    End Sub
+
+    Private Sub ToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem2.Click
+        MDIfactura()
+    End Sub
+
+    Private Sub EmpresaToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles EmpresaToolStripMenuItem1.Click
+        MDIcliente()
+    End Sub
+
+    Private Sub NuevoToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles NuevoToolStripMenuItem1.Click
+        MDIempleado()
+    End Sub
+
+    Private Sub UsuarioToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles UsuarioToolStripMenuItem2.Click
+        MDIusuario()
+    End Sub
+
+    Private Sub PaisToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles PaisToolStripMenuItem1.Click
+        MDIpais()
+    End Sub
+
+    Private Sub ProvinciaToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ProvinciaToolStripMenuItem1.Click
+        MDIprovincia()
+    End Sub
+
+    Private Sub MunicipioToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles MunicipioToolStripMenuItem1.Click
+        MDImunicipio()
+    End Sub
+
+    Private Sub SectorToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles SectorToolStripMenuItem1.Click
+        MDIsector()
+    End Sub
+
+    Private Sub TipoTeléfonoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TipoTeléfonoToolStripMenuItem.Click
+        MDItipotelefono()
+    End Sub
+
+    Private Sub EmpresaToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles EmpresaToolStripMenuItem2.Click
+        MDIempresa()
+    End Sub
+
+    Private Sub CMprincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.Text = "CM-Systems Se ha Autentificado como:  " & Login.txtUsuario.Text
+    End Sub
+
+    Private Sub OptionsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OptionsToolStripMenuItem.Click
+        MDIproducto()
     End Sub
 End Class

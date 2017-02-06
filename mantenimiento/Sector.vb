@@ -22,20 +22,19 @@ Public Class Sector
         End Try
 
     End Sub
-    Sub RecogerVariables()
-        Try
-            Nombre = txtsector.Text
-            Nota = txtnota.Text
-            Municipio = cbmunicipio.SelectedValue
-            insertSector(Nombre, Nota, Municipio)
-        Catch ex As Exception
+    Sub Guardar()
+        'recoger variables 
+        Nombre = txtsector.Text
+        ' Nota = txtnota.Text
+        Municipio = cbmunicipio.SelectedValue
+        'llamar metodo
+        insertSector(Nombre, Municipio)
 
-        End Try
     End Sub
     Private Sub btnguardarPro_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnguardarPro.Click
 
-        RecogerVariables()
-        MDIempleado()
+        Guardar()
+        MdiParent.Show()
         Me.Hide()
     End Sub
 

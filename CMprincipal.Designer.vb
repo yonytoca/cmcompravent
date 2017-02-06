@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class CMprincipal
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -21,7 +21,7 @@ Partial Class CMprincipal
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(CMprincipal))
@@ -49,10 +49,27 @@ Partial Class CMprincipal
         Me.PasteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator7 = New System.Windows.Forms.ToolStripSeparator()
         Me.SelectAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolBarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusBarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolsMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OptionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ProveedorToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EmpresaToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DirecciónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NuevoToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UsuarioToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PermisoToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TeléfonoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NuevoToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TipoTeléfonoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DirecciónToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PaisToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ProvinciaToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MunicipioToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SectorToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EmpresaToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.WindowsMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.NewWindowToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CascadeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -78,23 +95,7 @@ Partial Class CMprincipal
         Me.StatusStrip = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
-        Me.OptionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ProveedorToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EmpresaToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DirecciónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.TeléfonoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DirecciónToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EmpresaToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PaisToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ProvinciaToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MunicipioToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SectorToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NuevoToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.TipoTeléfonoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NuevoToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.UsuarioToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PermisoToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.lbl = New System.Windows.Forms.Label()
         Me.MenuStrip.SuspendLayout()
         Me.ToolStrip.SuspendLayout()
         Me.StatusStrip.SuspendLayout()
@@ -106,7 +107,7 @@ Partial Class CMprincipal
         Me.MenuStrip.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip.MdiWindowListItem = Me.WindowsMenu
         Me.MenuStrip.Name = "MenuStrip"
-        Me.MenuStrip.Size = New System.Drawing.Size(632, 24)
+        Me.MenuStrip.Size = New System.Drawing.Size(690, 24)
         Me.MenuStrip.TabIndex = 5
         Me.MenuStrip.Text = "MenuStrip"
         '
@@ -275,6 +276,12 @@ Partial Class CMprincipal
         Me.SelectAllToolStripMenuItem.Size = New System.Drawing.Size(204, 22)
         Me.SelectAllToolStripMenuItem.Text = "Seleccionar &todo"
         '
+        'ToolStripMenuItem2
+        '
+        Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
+        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(58, 20)
+        Me.ToolStripMenuItem2.Text = "Factura"
+        '
         'ViewMenu
         '
         Me.ViewMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolBarToolStripMenuItem, Me.StatusBarToolStripMenuItem})
@@ -306,6 +313,105 @@ Partial Class CMprincipal
         Me.ToolsMenu.Name = "ToolsMenu"
         Me.ToolsMenu.Size = New System.Drawing.Size(67, 20)
         Me.ToolsMenu.Text = "Registros"
+        '
+        'OptionsToolStripMenuItem
+        '
+        Me.OptionsToolStripMenuItem.Name = "OptionsToolStripMenuItem"
+        Me.OptionsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.OptionsToolStripMenuItem.Text = "Producto"
+        '
+        'ProveedorToolStripMenuItem1
+        '
+        Me.ProveedorToolStripMenuItem1.Name = "ProveedorToolStripMenuItem1"
+        Me.ProveedorToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.ProveedorToolStripMenuItem1.Text = "Proveedor"
+        '
+        'EmpresaToolStripMenuItem1
+        '
+        Me.EmpresaToolStripMenuItem1.Name = "EmpresaToolStripMenuItem1"
+        Me.EmpresaToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.EmpresaToolStripMenuItem1.Text = "Cliente"
+        '
+        'DirecciónToolStripMenuItem
+        '
+        Me.DirecciónToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NuevoToolStripMenuItem1, Me.UsuarioToolStripMenuItem2, Me.PermisoToolStripMenuItem1})
+        Me.DirecciónToolStripMenuItem.Name = "DirecciónToolStripMenuItem"
+        Me.DirecciónToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.DirecciónToolStripMenuItem.Text = "Empleado"
+        '
+        'NuevoToolStripMenuItem1
+        '
+        Me.NuevoToolStripMenuItem1.Name = "NuevoToolStripMenuItem1"
+        Me.NuevoToolStripMenuItem1.Size = New System.Drawing.Size(117, 22)
+        Me.NuevoToolStripMenuItem1.Text = "Nuevo"
+        '
+        'UsuarioToolStripMenuItem2
+        '
+        Me.UsuarioToolStripMenuItem2.Name = "UsuarioToolStripMenuItem2"
+        Me.UsuarioToolStripMenuItem2.Size = New System.Drawing.Size(117, 22)
+        Me.UsuarioToolStripMenuItem2.Text = "Usuario"
+        '
+        'PermisoToolStripMenuItem1
+        '
+        Me.PermisoToolStripMenuItem1.Name = "PermisoToolStripMenuItem1"
+        Me.PermisoToolStripMenuItem1.Size = New System.Drawing.Size(117, 22)
+        Me.PermisoToolStripMenuItem1.Text = "Permiso"
+        '
+        'TeléfonoToolStripMenuItem
+        '
+        Me.TeléfonoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NuevoToolStripMenuItem2, Me.TipoTeléfonoToolStripMenuItem})
+        Me.TeléfonoToolStripMenuItem.Name = "TeléfonoToolStripMenuItem"
+        Me.TeléfonoToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.TeléfonoToolStripMenuItem.Text = "Teléfono"
+        '
+        'NuevoToolStripMenuItem2
+        '
+        Me.NuevoToolStripMenuItem2.Name = "NuevoToolStripMenuItem2"
+        Me.NuevoToolStripMenuItem2.Size = New System.Drawing.Size(147, 22)
+        Me.NuevoToolStripMenuItem2.Text = "Nuevo"
+        '
+        'TipoTeléfonoToolStripMenuItem
+        '
+        Me.TipoTeléfonoToolStripMenuItem.Name = "TipoTeléfonoToolStripMenuItem"
+        Me.TipoTeléfonoToolStripMenuItem.Size = New System.Drawing.Size(147, 22)
+        Me.TipoTeléfonoToolStripMenuItem.Text = "Tipo Teléfono"
+        '
+        'DirecciónToolStripMenuItem1
+        '
+        Me.DirecciónToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PaisToolStripMenuItem1, Me.ProvinciaToolStripMenuItem1, Me.MunicipioToolStripMenuItem1, Me.SectorToolStripMenuItem1})
+        Me.DirecciónToolStripMenuItem1.Name = "DirecciónToolStripMenuItem1"
+        Me.DirecciónToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.DirecciónToolStripMenuItem1.Text = "Dirección"
+        '
+        'PaisToolStripMenuItem1
+        '
+        Me.PaisToolStripMenuItem1.Name = "PaisToolStripMenuItem1"
+        Me.PaisToolStripMenuItem1.Size = New System.Drawing.Size(128, 22)
+        Me.PaisToolStripMenuItem1.Text = "Pais"
+        '
+        'ProvinciaToolStripMenuItem1
+        '
+        Me.ProvinciaToolStripMenuItem1.Name = "ProvinciaToolStripMenuItem1"
+        Me.ProvinciaToolStripMenuItem1.Size = New System.Drawing.Size(128, 22)
+        Me.ProvinciaToolStripMenuItem1.Text = "Provincia"
+        '
+        'MunicipioToolStripMenuItem1
+        '
+        Me.MunicipioToolStripMenuItem1.Name = "MunicipioToolStripMenuItem1"
+        Me.MunicipioToolStripMenuItem1.Size = New System.Drawing.Size(128, 22)
+        Me.MunicipioToolStripMenuItem1.Text = "Municipio"
+        '
+        'SectorToolStripMenuItem1
+        '
+        Me.SectorToolStripMenuItem1.Name = "SectorToolStripMenuItem1"
+        Me.SectorToolStripMenuItem1.Size = New System.Drawing.Size(128, 22)
+        Me.SectorToolStripMenuItem1.Text = "Sector"
+        '
+        'EmpresaToolStripMenuItem2
+        '
+        Me.EmpresaToolStripMenuItem2.Name = "EmpresaToolStripMenuItem2"
+        Me.EmpresaToolStripMenuItem2.Size = New System.Drawing.Size(152, 22)
+        Me.EmpresaToolStripMenuItem2.Text = "Empresa"
         '
         'WindowsMenu
         '
@@ -396,7 +502,7 @@ Partial Class CMprincipal
         Me.ToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripButton, Me.OpenToolStripButton, Me.SaveToolStripButton, Me.ToolStripSeparator1, Me.PrintToolStripButton, Me.PrintPreviewToolStripButton, Me.ToolStripSeparator2, Me.HelpToolStripButton})
         Me.ToolStrip.Location = New System.Drawing.Point(0, 24)
         Me.ToolStrip.Name = "ToolStrip"
-        Me.ToolStrip.Size = New System.Drawing.Size(632, 25)
+        Me.ToolStrip.Size = New System.Drawing.Size(690, 25)
         Me.ToolStrip.TabIndex = 6
         Me.ToolStrip.Text = "ToolStrip"
         '
@@ -467,9 +573,9 @@ Partial Class CMprincipal
         'StatusStrip
         '
         Me.StatusStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel})
-        Me.StatusStrip.Location = New System.Drawing.Point(0, 431)
+        Me.StatusStrip.Location = New System.Drawing.Point(0, 422)
         Me.StatusStrip.Name = "StatusStrip"
-        Me.StatusStrip.Size = New System.Drawing.Size(632, 22)
+        Me.StatusStrip.Size = New System.Drawing.Size(690, 22)
         Me.StatusStrip.TabIndex = 7
         Me.StatusStrip.Text = "StatusStrip"
         '
@@ -479,116 +585,21 @@ Partial Class CMprincipal
         Me.ToolStripStatusLabel.Size = New System.Drawing.Size(42, 17)
         Me.ToolStripStatusLabel.Text = "Estado"
         '
-        'OptionsToolStripMenuItem
+        'lbl
         '
-        Me.OptionsToolStripMenuItem.Name = "OptionsToolStripMenuItem"
-        Me.OptionsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.OptionsToolStripMenuItem.Text = "Producto"
-        '
-        'ProveedorToolStripMenuItem1
-        '
-        Me.ProveedorToolStripMenuItem1.Name = "ProveedorToolStripMenuItem1"
-        Me.ProveedorToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
-        Me.ProveedorToolStripMenuItem1.Text = "Proveedor"
-        '
-        'EmpresaToolStripMenuItem1
-        '
-        Me.EmpresaToolStripMenuItem1.Name = "EmpresaToolStripMenuItem1"
-        Me.EmpresaToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
-        Me.EmpresaToolStripMenuItem1.Text = "Cliente"
-        '
-        'DirecciónToolStripMenuItem
-        '
-        Me.DirecciónToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NuevoToolStripMenuItem1, Me.UsuarioToolStripMenuItem2, Me.PermisoToolStripMenuItem1})
-        Me.DirecciónToolStripMenuItem.Name = "DirecciónToolStripMenuItem"
-        Me.DirecciónToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.DirecciónToolStripMenuItem.Text = "Empleado"
-        '
-        'TeléfonoToolStripMenuItem
-        '
-        Me.TeléfonoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NuevoToolStripMenuItem2, Me.TipoTeléfonoToolStripMenuItem})
-        Me.TeléfonoToolStripMenuItem.Name = "TeléfonoToolStripMenuItem"
-        Me.TeléfonoToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.TeléfonoToolStripMenuItem.Text = "Teléfono"
-        '
-        'DirecciónToolStripMenuItem1
-        '
-        Me.DirecciónToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PaisToolStripMenuItem1, Me.ProvinciaToolStripMenuItem1, Me.MunicipioToolStripMenuItem1, Me.SectorToolStripMenuItem1})
-        Me.DirecciónToolStripMenuItem1.Name = "DirecciónToolStripMenuItem1"
-        Me.DirecciónToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
-        Me.DirecciónToolStripMenuItem1.Text = "Dirección"
-        '
-        'EmpresaToolStripMenuItem2
-        '
-        Me.EmpresaToolStripMenuItem2.Name = "EmpresaToolStripMenuItem2"
-        Me.EmpresaToolStripMenuItem2.Size = New System.Drawing.Size(152, 22)
-        Me.EmpresaToolStripMenuItem2.Text = "Empresa"
-        '
-        'PaisToolStripMenuItem1
-        '
-        Me.PaisToolStripMenuItem1.Name = "PaisToolStripMenuItem1"
-        Me.PaisToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
-        Me.PaisToolStripMenuItem1.Text = "Pais"
-        '
-        'ProvinciaToolStripMenuItem1
-        '
-        Me.ProvinciaToolStripMenuItem1.Name = "ProvinciaToolStripMenuItem1"
-        Me.ProvinciaToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
-        Me.ProvinciaToolStripMenuItem1.Text = "Provincia"
-        '
-        'MunicipioToolStripMenuItem1
-        '
-        Me.MunicipioToolStripMenuItem1.Name = "MunicipioToolStripMenuItem1"
-        Me.MunicipioToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
-        Me.MunicipioToolStripMenuItem1.Text = "Municipio"
-        '
-        'SectorToolStripMenuItem1
-        '
-        Me.SectorToolStripMenuItem1.Name = "SectorToolStripMenuItem1"
-        Me.SectorToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
-        Me.SectorToolStripMenuItem1.Text = "Sector"
-        '
-        'NuevoToolStripMenuItem2
-        '
-        Me.NuevoToolStripMenuItem2.Name = "NuevoToolStripMenuItem2"
-        Me.NuevoToolStripMenuItem2.Size = New System.Drawing.Size(152, 22)
-        Me.NuevoToolStripMenuItem2.Text = "Nuevo"
-        '
-        'TipoTeléfonoToolStripMenuItem
-        '
-        Me.TipoTeléfonoToolStripMenuItem.Name = "TipoTeléfonoToolStripMenuItem"
-        Me.TipoTeléfonoToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.TipoTeléfonoToolStripMenuItem.Text = "Tipo Teléfono"
-        '
-        'NuevoToolStripMenuItem1
-        '
-        Me.NuevoToolStripMenuItem1.Name = "NuevoToolStripMenuItem1"
-        Me.NuevoToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
-        Me.NuevoToolStripMenuItem1.Text = "Nuevo"
-        '
-        'UsuarioToolStripMenuItem2
-        '
-        Me.UsuarioToolStripMenuItem2.Name = "UsuarioToolStripMenuItem2"
-        Me.UsuarioToolStripMenuItem2.Size = New System.Drawing.Size(152, 22)
-        Me.UsuarioToolStripMenuItem2.Text = "Usuario"
-        '
-        'PermisoToolStripMenuItem1
-        '
-        Me.PermisoToolStripMenuItem1.Name = "PermisoToolStripMenuItem1"
-        Me.PermisoToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
-        Me.PermisoToolStripMenuItem1.Text = "Permiso"
-        '
-        'ToolStripMenuItem2
-        '
-        Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
-        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(58, 20)
-        Me.ToolStripMenuItem2.Text = "Factura"
+        Me.lbl.AutoSize = True
+        Me.lbl.Location = New System.Drawing.Point(398, 9)
+        Me.lbl.Name = "lbl"
+        Me.lbl.Size = New System.Drawing.Size(50, 13)
+        Me.lbl.TabIndex = 9
+        Me.lbl.Text = "lblprueba"
         '
         'CMprincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(632, 453)
+        Me.ClientSize = New System.Drawing.Size(690, 444)
+        Me.Controls.Add(Me.lbl)
         Me.Controls.Add(Me.ToolStrip)
         Me.Controls.Add(Me.MenuStrip)
         Me.Controls.Add(Me.StatusStrip)
@@ -677,5 +688,5 @@ Partial Class CMprincipal
     Friend WithEvents SectorToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents EmpresaToolStripMenuItem2 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem2 As System.Windows.Forms.ToolStripMenuItem
-
+    Friend WithEvents lbl As Label
 End Class

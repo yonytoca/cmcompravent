@@ -29,7 +29,6 @@ Partial Class Sector
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.cbmunicipio = New System.Windows.Forms.ComboBox()
-        Me.txtnota = New System.Windows.Forms.TextBox()
         Me.txtsector = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -42,7 +41,6 @@ Partial Class Sector
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.cbmunicipio)
-        Me.Panel1.Controls.Add(Me.txtnota)
         Me.Panel1.Controls.Add(Me.txtsector)
         Me.Panel1.Location = New System.Drawing.Point(34, 53)
         Me.Panel1.Name = "Panel1"
@@ -102,13 +100,6 @@ Partial Class Sector
         Me.cbmunicipio.Size = New System.Drawing.Size(245, 21)
         Me.cbmunicipio.TabIndex = 2
         '
-        'txtnota
-        '
-        Me.txtnota.Location = New System.Drawing.Point(85, 101)
-        Me.txtnota.Name = "txtnota"
-        Me.txtnota.Size = New System.Drawing.Size(164, 20)
-        Me.txtnota.TabIndex = 1
-        '
         'txtsector
         '
         Me.txtsector.Location = New System.Drawing.Point(85, 60)
@@ -136,6 +127,5 @@ Partial Class Sector
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents cbmunicipio As System.Windows.Forms.ComboBox
-    Friend WithEvents txtnota As System.Windows.Forms.TextBox
     Friend WithEvents txtsector As System.Windows.Forms.TextBox
 End Class

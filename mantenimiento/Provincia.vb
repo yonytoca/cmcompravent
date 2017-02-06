@@ -21,33 +21,11 @@ Public Class Provincia
         End Try
 
     End Sub
-    Public Sub RecogerVariables()
-        'Nombre = txtnombreEm.Text
-        'Apellido = txtapellidoEm.Text
-        'Cedula = txtcedulaEm.Text
-        'Telefono = txttelefonoEm.Text
-        'Calle = txtcalleEm.Text
-        'Casa = txtcasaEm.Text
+    Public Sub Guardar()
         Nombre = txtnombrePro.Text
-        Nota = txtnotaPro.Text
         Pais = cbpais.SelectedValue
-        'Provinvia = cbprovincia.Text
-        'Municipio = cbmunicipio.Text
-        'Sector = cbsector.Text
-        Try
-            sql = "insert into provincia(nombre,comentario,idpais)value('" & Nombre & "', '" & Nota & "','" & Pais & "')"
-            da = New MySqlDataAdapter(Sql, Conex)
-            dt = New DataTable
-            da.Fill(dt)
-            'Datos.DataSource = dt
-            MsgBox("Datos almacenados con exito")
-        Catch ex As Exception
-            MsgBox(ex.Message)
 
-            MsgBox("Los campos estan vacios")
-            'MsgBox(Nombre + Apellido)
-
-        End Try
+        InsertProvincia(Nombre, Pais)
 
     End Sub
 
@@ -57,8 +35,8 @@ Public Class Provincia
     End Sub
 
     Private Sub btnguardarPro_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnguardarPro.Click
-        RecogerVariables()
-        MDIempleado()
+        Guardar()
+        MDImunicipio()
         Me.Hide()
     End Sub
 End Class

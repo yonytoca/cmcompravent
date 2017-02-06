@@ -49,3 +49,13 @@ D:\cmcompravent\obj\x86\Debug\compravent.vbproj.GenerateResource.Cache
 D:\cmcompravent\obj\x86\Debug\compravent.vbprojResolveAssemblyReference.cache
 D:\cmcompravent\bin\Debug\MySql.Data.dll
 D:\cmcompravent\obj\x86\Debug\compravent.Usuario.resources
+D:\cmcompravent\obj\x86\Debug\compravent.Lclientes.resources
+D:\cmcompravent\bin\Debug\compravent.exe.manifest
+D:\cmcompravent\bin\Debug\compravent.application
+D:\cmcompravent\obj\x86\Debug\compravent.exe.manifest
+D:\cmcompravent\obj\x86\Debug\compravent.application
+D:\cmcompravent\obj\x86\Debug\compravent.TipoTelefono.resources
+D:\cmcompravent\obj\x86\Debug\compravent.Empresa.resources
+D:\cmcompravent\obj\x86\Debug\compravent.Proveedor.resources
+D:\cmcompravent\obj\x86\Debug\compravent.Producto.resources
+D:\cmcompravent\obj\x86\Debug\compravent.frmFactura.resources
