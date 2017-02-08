@@ -59,3 +59,8 @@ D:\cmcompravent\obj\x86\Debug\compravent.Empresa.resources
 D:\cmcompravent\obj\x86\Debug\compravent.Proveedor.resources
 D:\cmcompravent\obj\x86\Debug\compravent.Producto.resources
 D:\cmcompravent\obj\x86\Debug\compravent.frmFactura.resources
+D:\cmcompravent\obj\x86\Debug\Interop.FindNetPrintersLib.dll
+D:\cmcompravent\obj\x86\Debug\Interop.PrinterExtensionLib.dll
+D:\cmcompravent\obj\x86\Debug\Interop.PrintUIObjLib.dll
+D:\cmcompravent\obj\x86\Debug\compravent.vbproj.ResolveComReference.cache
+D:\cmcompravent\obj\x86\Debug\compravent.FacturaImprimir.resources

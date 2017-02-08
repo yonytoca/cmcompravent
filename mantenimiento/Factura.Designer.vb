@@ -37,6 +37,7 @@ Partial Class frmFactura
         Me.lblcodigoUsuario = New System.Windows.Forms.Label()
         Me.DgFactura = New System.Windows.Forms.DataGridView()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.btnQuitar = New System.Windows.Forms.Button()
         Me.btnAgregar = New System.Windows.Forms.Button()
         Me.txtTotal = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -90,6 +91,7 @@ Partial Class frmFactura
         CType(Me.DgFactura, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DgclienteCodigo, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         CType(Me.DgProductoId, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -99,23 +101,23 @@ Partial Class frmFactura
         '
         'txtBuscarP
         '
-        Me.txtBuscarP.Location = New System.Drawing.Point(106, 228)
+        Me.txtBuscarP.Location = New System.Drawing.Point(74, 228)
         Me.txtBuscarP.Name = "txtBuscarP"
-        Me.txtBuscarP.Size = New System.Drawing.Size(226, 20)
+        Me.txtBuscarP.Size = New System.Drawing.Size(213, 20)
         Me.txtBuscarP.TabIndex = 70
         '
         'Dgproducto
         '
         Me.Dgproducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.Dgproducto.Location = New System.Drawing.Point(106, 228)
+        Me.Dgproducto.Location = New System.Drawing.Point(74, 228)
         Me.Dgproducto.Name = "Dgproducto"
         Me.Dgproducto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.Dgproducto.Size = New System.Drawing.Size(714, 127)
+        Me.Dgproducto.Size = New System.Drawing.Size(663, 127)
         Me.Dgproducto.TabIndex = 69
         '
         'btnFacturar
         '
-        Me.btnFacturar.Location = New System.Drawing.Point(803, 140)
+        Me.btnFacturar.Location = New System.Drawing.Point(3, 171)
         Me.btnFacturar.Name = "btnFacturar"
         Me.btnFacturar.Size = New System.Drawing.Size(75, 23)
         Me.btnFacturar.TabIndex = 66
@@ -125,81 +127,81 @@ Partial Class frmFactura
         'lblTotalPagar
         '
         Me.lblTotalPagar.AutoSize = True
-        Me.lblTotalPagar.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(177, Byte))
+        Me.lblTotalPagar.Font = New System.Drawing.Font("Arial Unicode MS", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTotalPagar.ForeColor = System.Drawing.Color.Blue
-        Me.lblTotalPagar.Location = New System.Drawing.Point(764, 102)
+        Me.lblTotalPagar.Location = New System.Drawing.Point(820, 305)
         Me.lblTotalPagar.Name = "lblTotalPagar"
-        Me.lblTotalPagar.Size = New System.Drawing.Size(27, 29)
+        Me.lblTotalPagar.Size = New System.Drawing.Size(24, 25)
         Me.lblTotalPagar.TabIndex = 65
         Me.lblTotalPagar.Text = "0"
         '
         'lblItebis
         '
         Me.lblItebis.AutoSize = True
-        Me.lblItebis.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblItebis.Location = New System.Drawing.Point(764, 77)
+        Me.lblItebis.Font = New System.Drawing.Font("Arial Unicode MS", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblItebis.Location = New System.Drawing.Point(820, 278)
         Me.lblItebis.Name = "lblItebis"
-        Me.lblItebis.Size = New System.Drawing.Size(25, 25)
+        Me.lblItebis.Size = New System.Drawing.Size(24, 25)
         Me.lblItebis.TabIndex = 64
         Me.lblItebis.Text = "0"
         '
         'lblDescuento
         '
         Me.lblDescuento.AutoSize = True
-        Me.lblDescuento.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDescuento.Location = New System.Drawing.Point(764, 55)
+        Me.lblDescuento.Font = New System.Drawing.Font("Arial Unicode MS", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDescuento.Location = New System.Drawing.Point(820, 256)
         Me.lblDescuento.Name = "lblDescuento"
-        Me.lblDescuento.Size = New System.Drawing.Size(25, 25)
+        Me.lblDescuento.Size = New System.Drawing.Size(24, 25)
         Me.lblDescuento.TabIndex = 63
         Me.lblDescuento.Text = "0"
         '
         'lblMonto
         '
         Me.lblMonto.AutoSize = True
-        Me.lblMonto.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblMonto.Location = New System.Drawing.Point(764, 27)
+        Me.lblMonto.Font = New System.Drawing.Font("Arial Unicode MS", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMonto.Location = New System.Drawing.Point(820, 230)
         Me.lblMonto.Name = "lblMonto"
-        Me.lblMonto.Size = New System.Drawing.Size(25, 25)
+        Me.lblMonto.Size = New System.Drawing.Size(24, 25)
         Me.lblMonto.TabIndex = 62
         Me.lblMonto.Text = "0"
         '
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(594, 102)
+        Me.Label15.Font = New System.Drawing.Font("Arial Unicode MS", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.Location = New System.Drawing.Point(754, 305)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(154, 25)
+        Me.Label15.Size = New System.Drawing.Size(60, 25)
         Me.Label15.TabIndex = 61
-        Me.Label15.Text = "Total a Pagar"
+        Me.Label15.Text = "Total"
         '
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(680, 77)
+        Me.Label14.Font = New System.Drawing.Font("Arial Unicode MS", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.Location = New System.Drawing.Point(749, 278)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(68, 25)
+        Me.Label14.Size = New System.Drawing.Size(65, 25)
         Me.Label14.TabIndex = 60
         Me.Label14.Text = "ITBIS"
         '
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(683, 52)
+        Me.Label13.Font = New System.Drawing.Font("Arial Unicode MS", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(753, 253)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(65, 25)
+        Me.Label13.Size = New System.Drawing.Size(61, 25)
         Me.Label13.TabIndex = 59
         Me.Label13.Text = "Desc"
         '
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(671, 27)
+        Me.Label12.Font = New System.Drawing.Font("Arial Unicode MS", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(744, 230)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(77, 25)
+        Me.Label12.Size = New System.Drawing.Size(70, 25)
         Me.Label12.TabIndex = 58
         Me.Label12.Text = "Monto"
         '
@@ -229,11 +231,12 @@ Partial Class frmFactura
         Me.DgFactura.Location = New System.Drawing.Point(13, 228)
         Me.DgFactura.Name = "DgFactura"
         Me.DgFactura.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DgFactura.Size = New System.Drawing.Size(860, 188)
+        Me.DgFactura.Size = New System.Drawing.Size(724, 188)
         Me.DgFactura.TabIndex = 53
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.btnQuitar)
         Me.GroupBox1.Controls.Add(Me.btnAgregar)
         Me.GroupBox1.Controls.Add(Me.txtTotal)
         Me.GroupBox1.Controls.Add(Me.Label8)
@@ -250,14 +253,24 @@ Partial Class frmFactura
         Me.GroupBox1.Controls.Add(Me.txtDecuento)
         Me.GroupBox1.Location = New System.Drawing.Point(13, 169)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(860, 58)
+        Me.GroupBox1.Size = New System.Drawing.Size(909, 58)
         Me.GroupBox1.TabIndex = 48
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Producto"
         '
+        'btnQuitar
+        '
+        Me.btnQuitar.Location = New System.Drawing.Point(693, 29)
+        Me.btnQuitar.Name = "btnQuitar"
+        Me.btnQuitar.Size = New System.Drawing.Size(75, 23)
+        Me.btnQuitar.TabIndex = 23
+        Me.btnQuitar.Text = "Quitar"
+        Me.btnQuitar.UseVisualStyleBackColor = True
+        Me.btnQuitar.Visible = False
+        '
         'btnAgregar
         '
-        Me.btnAgregar.Location = New System.Drawing.Point(730, 30)
+        Me.btnAgregar.Location = New System.Drawing.Point(612, 29)
         Me.btnAgregar.Name = "btnAgregar"
         Me.btnAgregar.Size = New System.Drawing.Size(75, 23)
         Me.btnAgregar.TabIndex = 18
@@ -266,15 +279,15 @@ Partial Class frmFactura
         '
         'txtTotal
         '
-        Me.txtTotal.Location = New System.Drawing.Point(624, 32)
+        Me.txtTotal.Location = New System.Drawing.Point(530, 32)
         Me.txtTotal.Name = "txtTotal"
-        Me.txtTotal.Size = New System.Drawing.Size(100, 20)
+        Me.txtTotal.Size = New System.Drawing.Size(76, 20)
         Me.txtTotal.TabIndex = 17
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(627, 16)
+        Me.Label8.Location = New System.Drawing.Point(533, 16)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(31, 13)
         Me.Label8.TabIndex = 16
@@ -283,7 +296,7 @@ Partial Class frmFactura
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(539, 16)
+        Me.Label7.Location = New System.Drawing.Point(457, 16)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(43, 13)
         Me.Label7.TabIndex = 15
@@ -292,7 +305,7 @@ Partial Class frmFactura
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(23, 16)
+        Me.Label6.Location = New System.Drawing.Point(4, 16)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(40, 13)
         Me.Label6.TabIndex = 14
@@ -301,7 +314,7 @@ Partial Class frmFactura
         'lbBuscarP
         '
         Me.lbBuscarP.AutoSize = True
-        Me.lbBuscarP.Location = New System.Drawing.Point(310, 35)
+        Me.lbBuscarP.Location = New System.Drawing.Point(278, 35)
         Me.lbBuscarP.Name = "lbBuscarP"
         Me.lbBuscarP.Size = New System.Drawing.Size(40, 13)
         Me.lbBuscarP.TabIndex = 22
@@ -311,7 +324,7 @@ Partial Class frmFactura
         'txtCodigoProducto
         '
         Me.txtCodigoProducto.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.txtCodigoProducto.Location = New System.Drawing.Point(20, 32)
+        Me.txtCodigoProducto.Location = New System.Drawing.Point(1, 32)
         Me.txtCodigoProducto.Name = "txtCodigoProducto"
         Me.txtCodigoProducto.Size = New System.Drawing.Size(58, 20)
         Me.txtCodigoProducto.TabIndex = 4
@@ -321,7 +334,7 @@ Partial Class frmFactura
         Me.txtDescripcion.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.txtDescripcion.Cursor = System.Windows.Forms.Cursors.Arrow
         Me.txtDescripcion.HideSelection = False
-        Me.txtDescripcion.Location = New System.Drawing.Point(91, 32)
+        Me.txtDescripcion.Location = New System.Drawing.Point(61, 32)
         Me.txtDescripcion.Name = "txtDescripcion"
         Me.txtDescripcion.ReadOnly = True
         Me.txtDescripcion.Size = New System.Drawing.Size(213, 20)
@@ -330,7 +343,7 @@ Partial Class frmFactura
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(450, 16)
+        Me.Label2.Location = New System.Drawing.Point(380, 16)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(37, 13)
         Me.Label2.TabIndex = 10
@@ -339,7 +352,7 @@ Partial Class frmFactura
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(377, 16)
+        Me.Label3.Location = New System.Drawing.Point(319, 16)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(49, 13)
         Me.Label3.TabIndex = 11
@@ -348,7 +361,7 @@ Partial Class frmFactura
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(96, 16)
+        Me.Label4.Location = New System.Drawing.Point(66, 16)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(63, 13)
         Me.Label4.TabIndex = 12
@@ -357,7 +370,7 @@ Partial Class frmFactura
         'txtCantidad
         '
         Me.txtCantidad.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.txtCantidad.Location = New System.Drawing.Point(380, 32)
+        Me.txtCantidad.Location = New System.Drawing.Point(322, 32)
         Me.txtCantidad.Name = "txtCantidad"
         Me.txtCantidad.Size = New System.Drawing.Size(55, 20)
         Me.txtCantidad.TabIndex = 7
@@ -365,7 +378,7 @@ Partial Class frmFactura
         'txtPrecio
         '
         Me.txtPrecio.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.txtPrecio.Location = New System.Drawing.Point(453, 32)
+        Me.txtPrecio.Location = New System.Drawing.Point(383, 32)
         Me.txtPrecio.Name = "txtPrecio"
         Me.txtPrecio.Size = New System.Drawing.Size(72, 20)
         Me.txtPrecio.TabIndex = 8
@@ -373,7 +386,7 @@ Partial Class frmFactura
         'txtDecuento
         '
         Me.txtDecuento.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.txtDecuento.Location = New System.Drawing.Point(542, 32)
+        Me.txtDecuento.Location = New System.Drawing.Point(460, 32)
         Me.txtDecuento.Name = "txtDecuento"
         Me.txtDecuento.Size = New System.Drawing.Size(64, 20)
         Me.txtDecuento.TabIndex = 5
@@ -408,14 +421,14 @@ Partial Class frmFactura
         '
         'txtCocliente
         '
-        Me.txtCocliente.Location = New System.Drawing.Point(21, 65)
+        Me.txtCocliente.Location = New System.Drawing.Point(21, 50)
         Me.txtCocliente.Name = "txtCocliente"
         Me.txtCocliente.Size = New System.Drawing.Size(58, 20)
         Me.txtCocliente.TabIndex = 43
         '
         'txtNcliente
         '
-        Me.txtNcliente.Location = New System.Drawing.Point(85, 65)
+        Me.txtNcliente.Location = New System.Drawing.Point(85, 50)
         Me.txtNcliente.Name = "txtNcliente"
         Me.txtNcliente.Size = New System.Drawing.Size(175, 20)
         Me.txtNcliente.TabIndex = 71
@@ -423,10 +436,11 @@ Partial Class frmFactura
         'Panel1
         '
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.btnFacturar)
         Me.Panel1.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Panel1.Location = New System.Drawing.Point(590, 18)
+        Me.Panel1.Location = New System.Drawing.Point(743, 217)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(288, 120)
+        Me.Panel1.Size = New System.Drawing.Size(179, 199)
         Me.Panel1.TabIndex = 73
         '
         'GroupBox2
@@ -440,9 +454,9 @@ Partial Class frmFactura
         Me.GroupBox2.Controls.Add(Me.lblProvinviaC)
         Me.GroupBox2.Controls.Add(Me.lblPaisC)
         Me.GroupBox2.Controls.Add(Me.lbBuscarC)
-        Me.GroupBox2.Location = New System.Drawing.Point(13, 52)
+        Me.GroupBox2.Location = New System.Drawing.Point(13, 37)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(294, 84)
+        Me.GroupBox2.Size = New System.Drawing.Size(294, 99)
         Me.GroupBox2.TabIndex = 74
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Cliente"
@@ -450,7 +464,7 @@ Partial Class frmFactura
         'lblTipoT
         '
         Me.lblTipoT.AutoSize = True
-        Me.lblTipoT.Location = New System.Drawing.Point(247, 57)
+        Me.lblTipoT.Location = New System.Drawing.Point(199, 51)
         Me.lblTipoT.Name = "lblTipoT"
         Me.lblTipoT.Size = New System.Drawing.Size(31, 13)
         Me.lblTipoT.TabIndex = 76
@@ -459,7 +473,7 @@ Partial Class frmFactura
         'lblCasaC
         '
         Me.lblCasaC.AutoSize = True
-        Me.lblCasaC.Location = New System.Drawing.Point(100, 62)
+        Me.lblCasaC.Location = New System.Drawing.Point(201, 77)
         Me.lblCasaC.Name = "lblCasaC"
         Me.lblCasaC.Size = New System.Drawing.Size(31, 13)
         Me.lblCasaC.TabIndex = 75
@@ -468,7 +482,7 @@ Partial Class frmFactura
         'lblTelefonoC
         '
         Me.lblTelefonoC.AutoSize = True
-        Me.lblTelefonoC.Location = New System.Drawing.Point(186, 62)
+        Me.lblTelefonoC.Location = New System.Drawing.Point(197, 37)
         Me.lblTelefonoC.Name = "lblTelefonoC"
         Me.lblTelefonoC.Size = New System.Drawing.Size(49, 13)
         Me.lblTelefonoC.TabIndex = 52
@@ -477,7 +491,7 @@ Partial Class frmFactura
         'lblCalleC
         '
         Me.lblCalleC.AutoSize = True
-        Me.lblCalleC.Location = New System.Drawing.Point(6, 62)
+        Me.lblCalleC.Location = New System.Drawing.Point(201, 63)
         Me.lblCalleC.Name = "lblCalleC"
         Me.lblCalleC.Size = New System.Drawing.Size(30, 13)
         Me.lblCalleC.TabIndex = 74
@@ -486,7 +500,7 @@ Partial Class frmFactura
         'lblSectorC
         '
         Me.lblSectorC.AutoSize = True
-        Me.lblSectorC.Location = New System.Drawing.Point(142, 50)
+        Me.lblSectorC.Location = New System.Drawing.Point(6, 74)
         Me.lblSectorC.Name = "lblSectorC"
         Me.lblSectorC.Size = New System.Drawing.Size(38, 13)
         Me.lblSectorC.TabIndex = 51
@@ -495,7 +509,7 @@ Partial Class frmFactura
         'lblMunicipioC
         '
         Me.lblMunicipioC.AutoSize = True
-        Me.lblMunicipioC.Location = New System.Drawing.Point(142, 36)
+        Me.lblMunicipioC.Location = New System.Drawing.Point(6, 61)
         Me.lblMunicipioC.Name = "lblMunicipioC"
         Me.lblMunicipioC.Size = New System.Drawing.Size(52, 13)
         Me.lblMunicipioC.TabIndex = 50
@@ -534,9 +548,9 @@ Partial Class frmFactura
         Me.GroupBox3.Controls.Add(Me.lblhora)
         Me.GroupBox3.Controls.Add(Me.Label11)
         Me.GroupBox3.Controls.Add(Me.Label10)
-        Me.GroupBox3.Location = New System.Drawing.Point(313, 11)
+        Me.GroupBox3.Location = New System.Drawing.Point(583, 2)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(271, 125)
+        Me.GroupBox3.Size = New System.Drawing.Size(337, 153)
         Me.GroupBox3.TabIndex = 75
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Empresa"
@@ -544,7 +558,7 @@ Partial Class frmFactura
         'lblCasaE
         '
         Me.lblCasaE.AutoSize = True
-        Me.lblCasaE.Location = New System.Drawing.Point(149, 85)
+        Me.lblCasaE.Location = New System.Drawing.Point(178, 106)
         Me.lblCasaE.Name = "lblCasaE"
         Me.lblCasaE.Size = New System.Drawing.Size(31, 13)
         Me.lblCasaE.TabIndex = 73
@@ -553,7 +567,7 @@ Partial Class frmFactura
         'lblCalleE
         '
         Me.lblCalleE.AutoSize = True
-        Me.lblCalleE.Location = New System.Drawing.Point(150, 67)
+        Me.lblCalleE.Location = New System.Drawing.Point(22, 106)
         Me.lblCalleE.Name = "lblCalleE"
         Me.lblCalleE.Size = New System.Drawing.Size(30, 13)
         Me.lblCalleE.TabIndex = 72
@@ -562,7 +576,7 @@ Partial Class frmFactura
         'lblSectorE
         '
         Me.lblSectorE.AutoSize = True
-        Me.lblSectorE.Location = New System.Drawing.Point(148, 51)
+        Me.lblSectorE.Location = New System.Drawing.Point(20, 92)
         Me.lblSectorE.Name = "lblSectorE"
         Me.lblSectorE.Size = New System.Drawing.Size(38, 13)
         Me.lblSectorE.TabIndex = 71
@@ -571,7 +585,7 @@ Partial Class frmFactura
         'lblMunicipioE
         '
         Me.lblMunicipioE.AutoSize = True
-        Me.lblMunicipioE.Location = New System.Drawing.Point(20, 85)
+        Me.lblMunicipioE.Location = New System.Drawing.Point(20, 79)
         Me.lblMunicipioE.Name = "lblMunicipioE"
         Me.lblMunicipioE.Size = New System.Drawing.Size(52, 13)
         Me.lblMunicipioE.TabIndex = 70
@@ -580,7 +594,7 @@ Partial Class frmFactura
         'lblProvinciaE
         '
         Me.lblProvinciaE.AutoSize = True
-        Me.lblProvinciaE.Location = New System.Drawing.Point(20, 67)
+        Me.lblProvinciaE.Location = New System.Drawing.Point(20, 65)
         Me.lblProvinciaE.Name = "lblProvinciaE"
         Me.lblProvinciaE.Size = New System.Drawing.Size(51, 13)
         Me.lblProvinciaE.TabIndex = 69
@@ -598,7 +612,7 @@ Partial Class frmFactura
         'lblTelefonoEm
         '
         Me.lblTelefonoEm.AutoSize = True
-        Me.lblTelefonoEm.Location = New System.Drawing.Point(197, 28)
+        Me.lblTelefonoEm.Location = New System.Drawing.Point(174, 57)
         Me.lblTelefonoEm.Name = "lblTelefonoEm"
         Me.lblTelefonoEm.Size = New System.Drawing.Size(49, 13)
         Me.lblTelefonoEm.TabIndex = 66
@@ -607,7 +621,7 @@ Partial Class frmFactura
         'lblSlogan
         '
         Me.lblSlogan.AutoSize = True
-        Me.lblSlogan.Location = New System.Drawing.Point(20, 28)
+        Me.lblSlogan.Location = New System.Drawing.Point(91, 27)
         Me.lblSlogan.Name = "lblSlogan"
         Me.lblSlogan.Size = New System.Drawing.Size(40, 13)
         Me.lblSlogan.TabIndex = 65
@@ -616,7 +630,7 @@ Partial Class frmFactura
         'lblEmpresa
         '
         Me.lblEmpresa.AutoSize = True
-        Me.lblEmpresa.Location = New System.Drawing.Point(109, 16)
+        Me.lblEmpresa.Location = New System.Drawing.Point(109, 9)
         Me.lblEmpresa.Name = "lblEmpresa"
         Me.lblEmpresa.Size = New System.Drawing.Size(44, 13)
         Me.lblEmpresa.TabIndex = 64
@@ -625,7 +639,7 @@ Partial Class frmFactura
         'lblfecha
         '
         Me.lblfecha.AutoSize = True
-        Me.lblfecha.Location = New System.Drawing.Point(62, 104)
+        Me.lblfecha.Location = New System.Drawing.Point(211, 75)
         Me.lblfecha.Name = "lblfecha"
         Me.lblfecha.Size = New System.Drawing.Size(45, 13)
         Me.lblfecha.TabIndex = 63
@@ -634,7 +648,7 @@ Partial Class frmFactura
         'lblhora
         '
         Me.lblhora.AutoSize = True
-        Me.lblhora.Location = New System.Drawing.Point(191, 104)
+        Me.lblhora.Location = New System.Drawing.Point(208, 91)
         Me.lblhora.Name = "lblhora"
         Me.lblhora.Size = New System.Drawing.Size(45, 13)
         Me.lblhora.TabIndex = 62
@@ -643,7 +657,7 @@ Partial Class frmFactura
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(148, 104)
+        Me.Label11.Location = New System.Drawing.Point(177, 91)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(30, 13)
         Me.Label11.TabIndex = 61
@@ -652,7 +666,7 @@ Partial Class frmFactura
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(19, 103)
+        Me.Label10.Location = New System.Drawing.Point(176, 74)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(37, 13)
         Me.Label10.TabIndex = 60
@@ -695,24 +709,24 @@ Partial Class frmFactura
         'Dgcliente
         '
         Me.Dgcliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.Dgcliente.Location = New System.Drawing.Point(12, 136)
+        Me.Dgcliente.Location = New System.Drawing.Point(178, 73)
         Me.Dgcliente.Name = "Dgcliente"
         Me.Dgcliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.Dgcliente.Size = New System.Drawing.Size(445, 196)
+        Me.Dgcliente.Size = New System.Drawing.Size(399, 109)
         Me.Dgcliente.TabIndex = 67
         '
         'txtBuscar
         '
-        Me.txtBuscar.Location = New System.Drawing.Point(12, 136)
+        Me.txtBuscar.Location = New System.Drawing.Point(178, 73)
         Me.txtBuscar.Name = "txtBuscar"
-        Me.txtBuscar.Size = New System.Drawing.Size(154, 20)
+        Me.txtBuscar.Size = New System.Drawing.Size(153, 20)
         Me.txtBuscar.TabIndex = 68
         '
         'frmFactura
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(890, 427)
+        Me.ClientSize = New System.Drawing.Size(932, 440)
         Me.Controls.Add(Me.DgProductoId)
         Me.Controls.Add(Me.DgEmpresa)
         Me.Controls.Add(Me.GroupBox3)
@@ -722,7 +736,6 @@ Partial Class frmFactura
         Me.Controls.Add(Me.txtBuscar)
         Me.Controls.Add(Me.Dgcliente)
         Me.Controls.Add(Me.Dgproducto)
-        Me.Controls.Add(Me.btnFacturar)
         Me.Controls.Add(Me.lblTotalPagar)
         Me.Controls.Add(Me.lblItebis)
         Me.Controls.Add(Me.txtfactura)
@@ -749,6 +762,7 @@ Partial Class frmFactura
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.DgclienteCodigo, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
@@ -825,4 +839,5 @@ Partial Class frmFactura
     Friend WithEvents lblTipoT As Label
     Friend WithEvents Dgcliente As DataGridView
     Friend WithEvents txtBuscar As TextBox
+    Friend WithEvents btnQuitar As Button
 End Class

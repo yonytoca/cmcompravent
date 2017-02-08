@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="compravent.exe" size="439240">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="compravent.exe" size="447944">
       <assemblyIdentity name="compravent" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>Vx/ae3oKzdKfkOxeZacMVzvZwFU=</dsig:DigestValue>
+        <dsig:DigestValue>Y6rZe9MG+LL3h0tmAXn2scHI8GI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

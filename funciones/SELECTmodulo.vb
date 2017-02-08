@@ -124,6 +124,32 @@ Module SELECTmodulo
 
     End Sub
 
+    'Mostrar cliente con relacion a las facturas abiertas
+    Public Sub BuscarClienteFabierta(Dato As DataGridView, Id As Integer)
+        Try
+            Dim DS As New DataSet
+            Dim query As String
+            query = "SELECT *  FROM persona AS pe, direccion AS d, pais AS pa, provincia AS pr, municipio AS m, sector AS s,telefono AS t,telefono AS ti, facturadetalle AS f
+                                        WHERE pe.iddireccion = d.iddireccion
+                                        AND d.idpais = pa.idpais
+                                        AND d.idprovincia = pr.idprovincia
+                                        AND d.idmunicipio = m.idmunicipio
+                                        AND d.idsector = s.idsector
+                                        AND pe.idtelefono=t.idtelefono
+                                        AND t.idtipotelefono=ti.idtipotelefono
+                                        AND f.idfactura=" & Id
+            Dim DA As New MySqlDataAdapter(query, Conex)
+            DA.Fill(DS, "persona,pais,provincia,municipio,sector,telefono,tipotelefono")
+            Dato.DataSource = DS
+            Dato.DataMember = "persona,pais,provincia,municipio,sector,telefono,tipotelefono"
+            dv3.Table = DS.Tables(0)
+            Dato.DataSource = dv3
+        Catch ex As Exception
+            '  MsgBox(ex.Message)
+        End Try
+
+    End Sub
+
     'Buscar producto en factura por nombre
     Public Sub BuscarProducto(Dato As DataGridView)
         Try
@@ -164,7 +190,8 @@ Module SELECTmodulo
     Public Sub FacturaDetalle(Dato As DataGridView, IDfactura As Integer)
         Try
             Dim DS As New DataSet
-            Dim query As String = "select facturadetalle.idproducto, 
+            Dim query As String = "select facturadetalle.idfacturadetalle,
+                                          facturadetalle.idproducto, 
                                           producto.nombre,
                                           facturadetalle.cantidad,
                                           facturadetalle.precio,

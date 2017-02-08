@@ -1,4 +1,6 @@
-﻿Public Class frmFactura
+﻿Imports FindNetPrintersLib
+
+Public Class frmFactura
     Dim Factura, Cliente, Usuario, Producto As Integer
     Dim Cantidad, Precio, Descuento, Total As Double
     Dim fecha As Date
@@ -58,13 +60,17 @@
 
     'metodo para asignar los valores consultado de producto
     Public Sub BuscarPro()
-        txtCodigoProducto.Text = Dgproducto.CurrentRow.Cells.Item(0).Value.ToString
-        txtDescripcion.Text = Dgproducto.CurrentRow.Cells.Item(1).Value.ToString
-        txtPrecio.Text = Dgproducto.CurrentRow.Cells.Item(2).Value.ToString
+        Try
+            txtCodigoProducto.Text = Dgproducto.CurrentRow.Cells.Item(0).Value.ToString
+            txtDescripcion.Text = Dgproducto.CurrentRow.Cells.Item(1).Value.ToString
+            txtPrecio.Text = Dgproducto.CurrentRow.Cells.Item(2).Value.ToString
 
-        txtBuscarP.Visible = False
-        Dgproducto.Visible = False
-        txtCantidad.Focus()
+            txtBuscarP.Visible = False
+            Dgproducto.Visible = False
+            txtCantidad.Focus()
+        Catch ex As Exception
+
+        End Try
     End Sub
     Public Sub ProductoId()
         BuscarProductoId(DgProductoId, Producto)
@@ -99,15 +105,19 @@
 
     'recoger los datos de la empresa
     Public Sub Empresa()
-        lblEmpresa.Text = DgEmpresa.CurrentRow.Cells.Item(1).Value.ToString
-        lblSlogan.Text = DgEmpresa.CurrentRow.Cells.Item(3).Value.ToString
-        lblTelefonoEm.Text = DgEmpresa.CurrentRow.Cells.Item(6).Value.ToString
-        lblPaisE.Text = DgEmpresa.CurrentRow.Cells.Item(16).Value.ToString
-        lblProvinciaE.Text = DgEmpresa.CurrentRow.Cells.Item(18).Value.ToString
-        lblMunicipioE.Text = DgEmpresa.CurrentRow.Cells.Item(21).Value.ToString
-        lblSectorE.Text = DgEmpresa.CurrentRow.Cells.Item(24).Value.ToString
-        lblCalleE.Text = DgEmpresa.CurrentRow.Cells.Item(13).Value.ToString
-        lblCasaE.Text = DgEmpresa.CurrentRow.Cells.Item(14).Value.ToString
+        Try
+            lblEmpresa.Text = DgEmpresa.CurrentRow.Cells.Item(1).Value.ToString
+            lblSlogan.Text = DgEmpresa.CurrentRow.Cells.Item(3).Value.ToString
+            lblTelefonoEm.Text = DgEmpresa.CurrentRow.Cells.Item(6).Value.ToString
+            lblPaisE.Text = DgEmpresa.CurrentRow.Cells.Item(16).Value.ToString
+            lblProvinciaE.Text = DgEmpresa.CurrentRow.Cells.Item(18).Value.ToString
+            lblMunicipioE.Text = DgEmpresa.CurrentRow.Cells.Item(21).Value.ToString
+            lblSectorE.Text = DgEmpresa.CurrentRow.Cells.Item(24).Value.ToString
+            lblCalleE.Text = DgEmpresa.CurrentRow.Cells.Item(13).Value.ToString
+            lblCasaE.Text = DgEmpresa.CurrentRow.Cells.Item(14).Value.ToString
+        Catch ex As Exception
+
+        End Try
     End Sub
 
     'metodo para asignar los valores consultado de cliente 
@@ -118,6 +128,9 @@
         txtCodigoProducto.Focus()
         txtBuscar.Visible = False
         Dgcliente.Visible = False
+    End Sub
+    Public Sub Quitar()
+        DELETEfactura(DgFactura.CurrentRow.Cells.Item(0).Value.ToString)
     End Sub
 
     'evento del Dgcliente buscar
@@ -152,6 +165,7 @@
             inserFacturaDetalle(Cantidad, Precio, Producto, Factura, Total)
             FacturaDetalle(DgFactura, ultimoIdF())
             TotalAp()
+            DgFactura.Columns.Item("idfacturadetalle").Visible = False
         Else
             MsgBox("Falta Cantidad")
             txtCantidad.Focus()
@@ -170,7 +184,7 @@
         Try
             Dim Total As Single
             Dim Col As Integer = DgFactura.CurrentCell.ColumnIndex
-            Col = 4
+            Col = 5
             For Each row As DataGridViewRow In DgFactura.Rows
                 Total += Val(row.Cells(Col).Value)
             Next
@@ -185,12 +199,18 @@
 
     'boton facturar
     Private Sub btnFacturar_Click(sender As Object, e As EventArgs) Handles btnFacturar.Click
+        FacturaImprimir.Show()
+
         Try
             Validate()
             inserFactura(fecha, Cliente, Usuario, Hora)
             txtfactura.Text = pone_ceros(ultimoIdF())
             FacturaDetalle(DgFactura, ultimoIdF)
             txtCocliente.Focus()
+            lblTotalPagar.Text = 0
+
+
+
         Catch ex As Exception
 
         End Try
@@ -211,10 +231,6 @@
         BuscarCli()
     End Sub
 
-    Private Sub GroupBox3_Enter(sender As Object, e As EventArgs) Handles GroupBox3.Enter
-
-    End Sub
-
     Private Sub frmFactura_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Variables()
         'txtCocliente.Text = Lclientes.txtMostrar.Text
@@ -223,6 +239,7 @@
         txtfactura.Text = pone_ceros(ultimoIdF())
         lblfecha.Text = Date.Now.ToString("dd/MM/yyyy")
         lblhora.Text = TimeString
+
 
         ' txtfactura.FindForm()
         DgclienteCodigo.Visible = False
@@ -247,7 +264,12 @@
 
         'BuscarProductoId(DgProductoId, Producto)
         'BuscarProId()
+
+        ' mantener el cliente de facturas abiertas 
+        BuscarClienteFabierta(DgclienteCodigo, Factura)
+
         FacturaDetalle(DgFactura, ultimoIdF())
+        DgFactura.Columns.Item("idfacturadetalle").Visible = False
         'FacturaDetalle(DgFactura, Factura)
         TotalAp()
     End Sub
@@ -259,6 +281,18 @@
             e.Handled = True
             BuscarCli()
         End If
+    End Sub
+
+    Private Sub btnQuitar_Click(sender As Object, e As EventArgs) Handles btnQuitar.Click
+        Quitar()
+        FacturaDetalle(DgFactura, ultimoIdF())
+        TotalAp()
+        DgFactura.Columns.Item("idfacturadetalle").Visible = False
+        btnQuitar.Visible = False
+    End Sub
+
+    Private Sub ControlPrint_Load(sender As Object, e As EventArgs)
+
     End Sub
 
     'el evento keypress buscar cliente por id
@@ -306,6 +340,9 @@
         Catch ex As Exception
             MsgBox("Producto no existe")
         End Try
+    End Sub
 
+    Private Sub DgFactura_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgFactura.CellClick
+        btnQuitar.Visible = True
     End Sub
 End Class

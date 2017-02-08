@@ -106,6 +106,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="funciones\Calculos.vb" />
+    <Compile Include="funciones\DELETEmodulo.vb" />
     <Compile Include="funciones\Limpiarcampos.vb" />
     <Compile Include="funciones\Vgenerales.vb" />
     <Compile Include="funciones\INSERTmodulo.vb" />
@@ -147,6 +148,12 @@
       <DependentUpon>Empresa.vb</DependentUpon>
     </Compile>
     <Compile Include="mantenimiento\Empresa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mantenimiento\FacturaImprimir.Designer.vb">
+      <DependentUpon>FacturaImprimir.vb</DependentUpon>
+    </Compile>
+    <Compile Include="mantenimiento\FacturaImprimir.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="mantenimiento\Lclientes.Designer.vb">
@@ -245,6 +252,9 @@
     <EmbeddedResource Include="mantenimiento\Factura.resx">
       <DependentUpon>Factura.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="mantenimiento\FacturaImprimir.resx">
+      <DependentUpon>FacturaImprimir.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="mantenimiento\Lclientes.resx">
       <DependentUpon>Lclientes.vb</DependentUpon>
     </EmbeddedResource>
@@ -316,6 +326,35 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\buscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="FindNetPrintersLib">
+      <Guid>{0FFF9602-69CF-4728-9EA4-141514866CA2}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="PrinterExtensionLib">
+      <Guid>{91CE54EE-C67C-4B46-A4FF-99416F27A8BF}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="PrintUIObjLib">
+      <Guid>{438EDB38-282C-435D-8BE3-4AB90B83CEF5}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
