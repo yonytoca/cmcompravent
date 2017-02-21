@@ -145,9 +145,9 @@ Module INSERTmodulo
         End Try
     End Sub
     'Factura detalle
-    Sub inserFacturaDetalle(ByVal V1, ByVal V2, ByVal V3, ByVal V4, ByVal V5)
+    Sub inserFacturaDetalle(ByVal V1, ByVal V2, ByVal V3, ByVal V4, ByVal V5, ByVal V6)
         Try
-            sql = "insert into facturadetalle(cantidad,precio,idproducto,idfactura,total)value('" & V1 & "', '" & V2 & "', '" & V3 & "', '" & V4 & "', '" & V5 & "')"
+            sql = "insert into facturadetalle(cantidad,precio,idproducto,idfactura,descuento,total)value('" & V1 & "', '" & V2 & "', '" & V3 & "', '" & V4 & "', '" & V5 & "', '" & V6 & "')"
             da = New MySqlDataAdapter(sql, Conex)
             dt = New DataTable
             da.Fill(dt)

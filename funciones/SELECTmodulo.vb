@@ -98,6 +98,24 @@ Module SELECTmodulo
         End Try
     End Sub
 
+    'Listado de las empresas
+    Public Sub EmpresaLista(Dato As DataGridView)
+        Try
+            Dim DS As New DataSet
+            Dim query As String
+            query = "SELECT *  FROM empresa"
+
+            Dim DA As New MySqlDataAdapter(query, Conex)
+            DA.Fill(DS, "empresa")
+            Dato.DataSource = DS
+            Dato.DataMember = "empresa"
+            dv.Table = DS.Tables(0)
+            Dato.DataSource = dv
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
     'Buscar cliente en factura
     Public Sub BuscarClienteCodigo(Dato As DataGridView, Id As Integer)
         Try
@@ -119,7 +137,7 @@ Module SELECTmodulo
             dv3.Table = DS.Tables(0)
             Dato.DataSource = dv3
         Catch ex As Exception
-            '  MsgBox(ex.Message)
+            MsgBox("Cliente No Existe")
         End Try
 
     End Sub
@@ -190,11 +208,12 @@ Module SELECTmodulo
     Public Sub FacturaDetalle(Dato As DataGridView, IDfactura As Integer)
         Try
             Dim DS As New DataSet
-            Dim query As String = "select facturadetalle.idfacturadetalle,
-                                          facturadetalle.idproducto, 
+            Dim query As String = "select facturadetalle.idfacturadetalle as Id,
+                                          facturadetalle.idproducto as Codigo, 
                                           producto.nombre,
                                           facturadetalle.cantidad,
                                           facturadetalle.precio,
+                                          facturadetalle.descuento,
                                           facturadetalle.total          
                                       from facturadetalle, producto where                                           
                                           producto.idproducto=facturadetalle.idproducto
@@ -206,6 +225,8 @@ Module SELECTmodulo
             Dato.DataMember = "facturadetalle, producto"
             dv2.Table = DS.Tables(0)
             Dato.DataSource = dv2
+
+            Dato.Columns(1).HeaderText = "Codigo"
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try

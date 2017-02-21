@@ -26,7 +26,6 @@ Partial Class Empleado
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.txtnombreEm = New System.Windows.Forms.TextBox()
         Me.txtapellidoEm = New System.Windows.Forms.TextBox()
         Me.txtcedulaEm = New System.Windows.Forms.TextBox()
@@ -50,7 +49,6 @@ Partial Class Empleado
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txttelefonoEm = New System.Windows.Forms.TextBox()
         Me.btnGuardarEm = New System.Windows.Forms.Button()
-        Me.btnCancelarEm = New System.Windows.Forms.Button()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.cbTipoTelefono = New System.Windows.Forms.ComboBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
@@ -58,7 +56,6 @@ Partial Class Empleado
         Me.Tpersona1 = New System.Windows.Forms.RadioButton()
         Me.Tpersona = New System.Windows.Forms.RadioButton()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.Dgpersona = New System.Windows.Forms.DataGridView()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -79,11 +76,6 @@ Partial Class Empleado
         '
         resources.ApplyResources(Me.Label6, "Label6")
         Me.Label6.Name = "Label6"
-        '
-        'Label8
-        '
-        resources.ApplyResources(Me.Label8, "Label8")
-        Me.Label8.Name = "Label8"
         '
         'txtnombreEm
         '
@@ -226,12 +218,6 @@ Partial Class Empleado
         Me.btnGuardarEm.Name = "btnGuardarEm"
         Me.btnGuardarEm.UseVisualStyleBackColor = True
         '
-        'btnCancelarEm
-        '
-        resources.ApplyResources(Me.btnCancelarEm, "btnCancelarEm")
-        Me.btnCancelarEm.Name = "btnCancelarEm"
-        Me.btnCancelarEm.UseVisualStyleBackColor = True
-        '
         'Label14
         '
         resources.ApplyResources(Me.Label14, "Label14")
@@ -279,12 +265,6 @@ Partial Class Empleado
         Me.Button1.Name = "Button1"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'Button2
-        '
-        resources.ApplyResources(Me.Button2, "Button2")
-        Me.Button2.Name = "Button2"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
         'Dgpersona
         '
         Me.Dgpersona.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -297,12 +277,10 @@ Partial Class Empleado
         resources.ApplyResources(Me, "$this")
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.Dgpersona)
-        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.cbTipoTelefono)
         Me.Controls.Add(Me.Label14)
-        Me.Controls.Add(Me.btnCancelarEm)
         Me.Controls.Add(Me.btnGuardarEm)
         Me.Controls.Add(Me.txttelefonoEm)
         Me.Controls.Add(Me.Label4)
@@ -310,7 +288,6 @@ Partial Class Empleado
         Me.Controls.Add(Me.txtcedulaEm)
         Me.Controls.Add(Me.txtapellidoEm)
         Me.Controls.Add(Me.txtnombreEm)
-        Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label1)
@@ -329,7 +306,6 @@ Partial Class Empleado
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents txtnombreEm As System.Windows.Forms.TextBox
     Friend WithEvents txtapellidoEm As System.Windows.Forms.TextBox
     Friend WithEvents txtcedulaEm As System.Windows.Forms.TextBox
@@ -349,7 +325,6 @@ Partial Class Empleado
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents txttelefonoEm As System.Windows.Forms.TextBox
     Friend WithEvents btnGuardarEm As System.Windows.Forms.Button
-    Friend WithEvents btnCancelarEm As System.Windows.Forms.Button
     Friend WithEvents LinkLabel4 As System.Windows.Forms.LinkLabel
     Friend WithEvents LinkLabel3 As System.Windows.Forms.LinkLabel
     Friend WithEvents LinkLabel2 As System.Windows.Forms.LinkLabel
@@ -361,6 +336,5 @@ Partial Class Empleado
     Friend WithEvents Tpersona1 As RadioButton
     Friend WithEvents Tpersona As RadioButton
     Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
     Friend WithEvents Dgpersona As DataGridView
 End Class

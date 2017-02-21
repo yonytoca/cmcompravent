@@ -51,7 +51,7 @@ Partial Class frmFactura
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtCantidad = New System.Windows.Forms.TextBox()
         Me.txtPrecio = New System.Windows.Forms.TextBox()
-        Me.txtDecuento = New System.Windows.Forms.TextBox()
+        Me.txtDescuento = New System.Windows.Forms.TextBox()
         Me.DgclienteCodigo = New System.Windows.Forms.DataGridView()
         Me.lbBuscarC = New System.Windows.Forms.LinkLabel()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -87,6 +87,8 @@ Partial Class frmFactura
         Me.DgEmpresa = New System.Windows.Forms.DataGridView()
         Me.Dgcliente = New System.Windows.Forms.DataGridView()
         Me.txtBuscar = New System.Windows.Forms.TextBox()
+        Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
+        Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
         CType(Me.Dgproducto, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DgFactura, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -227,6 +229,8 @@ Partial Class frmFactura
         '
         'DgFactura
         '
+        Me.DgFactura.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.DgFactura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgFactura.Location = New System.Drawing.Point(13, 228)
         Me.DgFactura.Name = "DgFactura"
@@ -250,7 +254,7 @@ Partial Class frmFactura
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.txtCantidad)
         Me.GroupBox1.Controls.Add(Me.txtPrecio)
-        Me.GroupBox1.Controls.Add(Me.txtDecuento)
+        Me.GroupBox1.Controls.Add(Me.txtDescuento)
         Me.GroupBox1.Location = New System.Drawing.Point(13, 169)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(909, 58)
@@ -383,13 +387,13 @@ Partial Class frmFactura
         Me.txtPrecio.Size = New System.Drawing.Size(72, 20)
         Me.txtPrecio.TabIndex = 8
         '
-        'txtDecuento
+        'txtDescuento
         '
-        Me.txtDecuento.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.txtDecuento.Location = New System.Drawing.Point(460, 32)
-        Me.txtDecuento.Name = "txtDecuento"
-        Me.txtDecuento.Size = New System.Drawing.Size(64, 20)
-        Me.txtDecuento.TabIndex = 5
+        Me.txtDescuento.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.txtDescuento.Location = New System.Drawing.Point(460, 32)
+        Me.txtDescuento.Name = "txtDescuento"
+        Me.txtDescuento.Size = New System.Drawing.Size(64, 20)
+        Me.txtDescuento.TabIndex = 5
         '
         'DgclienteCodigo
         '
@@ -722,6 +726,13 @@ Partial Class frmFactura
         Me.txtBuscar.Size = New System.Drawing.Size(153, 20)
         Me.txtBuscar.TabIndex = 68
         '
+        'PrintDialog1
+        '
+        Me.PrintDialog1.UseEXDialog = True
+        '
+        'PrintDocument1
+        '
+        '
         'frmFactura
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -803,7 +814,7 @@ Partial Class frmFactura
     Friend WithEvents Label4 As Label
     Friend WithEvents txtCantidad As TextBox
     Friend WithEvents txtPrecio As TextBox
-    Friend WithEvents txtDecuento As TextBox
+    Friend WithEvents txtDescuento As TextBox
     Friend WithEvents lbBuscarC As LinkLabel
     Friend WithEvents Label1 As Label
     Friend WithEvents txtCocliente As TextBox
@@ -840,4 +851,6 @@ Partial Class frmFactura
     Friend WithEvents Dgcliente As DataGridView
     Friend WithEvents txtBuscar As TextBox
     Friend WithEvents btnQuitar As Button
+    Friend WithEvents PrintDialog1 As PrintDialog
+    Friend WithEvents PrintDocument1 As Printing.PrintDocument
 End Class

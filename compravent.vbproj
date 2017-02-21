@@ -78,6 +78,8 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="MySql.Data, Version=6.6.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\MySQL\MySQL Connector Net 6.6.7\Assemblies\v4.0\MySql.Data.dll</HintPath>
@@ -86,6 +88,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -107,17 +110,14 @@
   <ItemGroup>
     <Compile Include="funciones\Calculos.vb" />
     <Compile Include="funciones\DELETEmodulo.vb" />
+    <Compile Include="funciones\EArticulo.vb" />
+    <Compile Include="funciones\EFactura.vb" />
+    <Compile Include="funciones\Imprimir.vb" />
     <Compile Include="funciones\Limpiarcampos.vb" />
     <Compile Include="funciones\Vgenerales.vb" />
     <Compile Include="funciones\INSERTmodulo.vb" />
     <Compile Include="funciones\MDImodulo.vb" />
     <Compile Include="funciones\SELECTmodulo.vb" />
-    <Compile Include="mantenimiento\cliente.Designer.vb">
-      <DependentUpon>cliente.vb</DependentUpon>
-    </Compile>
-    <Compile Include="mantenimiento\cliente.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="CMprincipal.Designer.vb">
       <DependentUpon>CMprincipal.vb</DependentUpon>
     </Compile>
@@ -148,12 +148,6 @@
       <DependentUpon>Empresa.vb</DependentUpon>
     </Compile>
     <Compile Include="mantenimiento\Empresa.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="mantenimiento\FacturaImprimir.Designer.vb">
-      <DependentUpon>FacturaImprimir.vb</DependentUpon>
-    </Compile>
-    <Compile Include="mantenimiento\FacturaImprimir.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="mantenimiento\Lclientes.Designer.vb">
@@ -232,11 +226,14 @@
     <Compile Include="mantenimiento\Usuario.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Reporte\FacturaRpt.Designer.vb">
+      <DependentUpon>FacturaRpt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte\FacturaRpt.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="mantenimiento\cliente.resx">
-      <DependentUpon>cliente.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CMprincipal.resx">
       <DependentUpon>CMprincipal.vb</DependentUpon>
     </EmbeddedResource>
@@ -251,9 +248,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="mantenimiento\Factura.resx">
       <DependentUpon>Factura.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="mantenimiento\FacturaImprimir.resx">
-      <DependentUpon>FacturaImprimir.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mantenimiento\Lclientes.resx">
       <DependentUpon>Lclientes.vb</DependentUpon>
@@ -288,6 +282,10 @@
     <EmbeddedResource Include="mantenimiento\Usuario.resx">
       <DependentUpon>Usuario.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reporte\FacturaRpt.resx">
+      <DependentUpon>FacturaRpt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte\Report1.rdlc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="compravent_ClaveTemporal.pfx" />
@@ -295,6 +293,8 @@
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
+    <None Include="My Project\DataSources\EArticulo.datasource" />
+    <None Include="My Project\DataSources\EFactura.datasource" />
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <CustomToolNamespace>My</CustomToolNamespace>
@@ -355,6 +355,9 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

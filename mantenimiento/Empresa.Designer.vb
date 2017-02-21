@@ -45,7 +45,9 @@ Partial Class Empresa
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txttelefono = New System.Windows.Forms.TextBox()
+        Me.DgEpresa = New System.Windows.Forms.DataGridView()
         Me.GroupBox1.SuspendLayout()
+        CType(Me.DgEpresa, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -258,11 +260,21 @@ Partial Class Empresa
         Me.txttelefono.Size = New System.Drawing.Size(100, 20)
         Me.txttelefono.TabIndex = 23
         '
+        'DgEpresa
+        '
+        Me.DgEpresa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgEpresa.Location = New System.Drawing.Point(526, 30)
+        Me.DgEpresa.Name = "DgEpresa"
+        Me.DgEpresa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DgEpresa.Size = New System.Drawing.Size(370, 230)
+        Me.DgEpresa.TabIndex = 24
+        '
         'Empresa
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(531, 324)
+        Me.ClientSize = New System.Drawing.Size(908, 320)
+        Me.Controls.Add(Me.DgEpresa)
         Me.Controls.Add(Me.txttelefono)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Button2)
@@ -278,6 +290,7 @@ Partial Class Empresa
         Me.Text = "Empresa"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        CType(Me.DgEpresa, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -306,4 +319,5 @@ Partial Class Empresa
     Friend WithEvents Button2 As Button
     Friend WithEvents Label6 As Label
     Friend WithEvents txttelefono As TextBox
+    Friend WithEvents DgEpresa As DataGridView
 End Class

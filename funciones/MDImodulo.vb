@@ -34,11 +34,7 @@
         frmcliente.MdiParent = CMprincipal
         frmcliente.Show()
     End Sub
-    Sub MDIcliente()
-        Dim frmcliente As New Cliente
-        frmcliente.MdiParent = CMprincipal
-        frmcliente.Show()
-    End Sub
+
     Sub MDIusuario()
         Dim frmusuario As New Usuario
         frmusuario.MdiParent = CMprincipal

@@ -1,5 +1,7 @@
 ﻿Module Vgenerales
 
+    Dim label(9) As Label
+
     'completar ceros a la iZquierda
     Public Function pone_ceros(F As Integer)
 
@@ -38,5 +40,35 @@
         End If
         Return SoloNumero
     End Function
+
+
+
+    Public Sub Empresa1(Dg As DataGridView)
+        Try
+
+            label(0).Text = Dg.CurrentRow.Cells.Item(1).Value.ToString
+            label(1).Text = Dg.CurrentRow.Cells.Item(3).Value.ToString
+            label(2).Text = Dg.CurrentRow.Cells.Item(6).Value.ToString
+            label(3).Text = Dg.CurrentRow.Cells.Item(16).Value.ToString
+            label(4).Text = Dg.CurrentRow.Cells.Item(18).Value.ToString
+            label(5).Text = Dg.CurrentRow.Cells.Item(21).Value.ToString
+            label(6).Text = Dg.CurrentRow.Cells.Item(24).Value.ToString
+            label(7).Text = Dg.CurrentRow.Cells.Item(13).Value.ToString
+            label(8).Text = Dg.CurrentRow.Cells.Item(14).Value.ToString
+
+            Dim i As Integer
+
+            For i = 0 To 5
+                MsgBox(label(i))
+            Next
+
+
+
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    ' función que retorna el total  
 
 End Module

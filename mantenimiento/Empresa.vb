@@ -82,11 +82,15 @@ Public Class Empresa
         End Try
 
     End Sub
+    Public Sub ListaEmpresa()
+        EmpresaLista(DgEpresa)
+    End Sub
 
     Private Sub Empresa_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ListaPais()
         ListaProvincia()
         ListaMunicipio()
         ListaSector()
+        ListaEmpresa()
     End Sub
 End Class

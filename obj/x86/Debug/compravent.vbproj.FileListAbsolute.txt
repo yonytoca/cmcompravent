@@ -36,7 +36,6 @@ D:\cmcompravent\obj\x86\Debug\compravent.pdb
 D:\cmcompravent\bin\Debug\compravent.exe
 D:\cmcompravent\bin\Debug\compravent.pdb
 D:\cmcompravent\bin\Debug\compravent.xml
-D:\cmcompravent\obj\x86\Debug\compravent.Cliente.resources
 D:\cmcompravent\obj\x86\Debug\compravent.CMprincipal.resources
 D:\cmcompravent\obj\x86\Debug\compravent.Login.resources
 D:\cmcompravent\obj\x86\Debug\compravent.Empleado.resources
@@ -46,7 +45,6 @@ D:\cmcompravent\obj\x86\Debug\compravent.Provincia.resources
 D:\cmcompravent\obj\x86\Debug\compravent.Sector.resources
 D:\cmcompravent\obj\x86\Debug\compravent.Resources.resources
 D:\cmcompravent\obj\x86\Debug\compravent.vbproj.GenerateResource.Cache
-D:\cmcompravent\obj\x86\Debug\compravent.vbprojResolveAssemblyReference.cache
 D:\cmcompravent\bin\Debug\MySql.Data.dll
 D:\cmcompravent\obj\x86\Debug\compravent.Usuario.resources
 D:\cmcompravent\obj\x86\Debug\compravent.Lclientes.resources
@@ -63,4 +61,10 @@ D:\cmcompravent\obj\x86\Debug\Interop.FindNetPrintersLib.dll
 D:\cmcompravent\obj\x86\Debug\Interop.PrinterExtensionLib.dll
 D:\cmcompravent\obj\x86\Debug\Interop.PrintUIObjLib.dll
 D:\cmcompravent\obj\x86\Debug\compravent.vbproj.ResolveComReference.cache
-D:\cmcompravent\obj\x86\Debug\compravent.FacturaImprimir.resources
+D:\cmcompravent\obj\x86\Debug\RdlCompile.cache
+D:\cmcompravent\obj\x86\Debug\RdlCompile.compiled
+D:\cmcompravent\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\cmcompravent\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\cmcompravent\obj\x86\Debug\compravent.FacturaRpt.resources
+D:\cmcompravent\bin\Debug\MySql.Data.xml
+D:\cmcompravent\obj\x86\Debug\compravent.vbprojResolveAssemblyReference.cache

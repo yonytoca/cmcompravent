@@ -89,19 +89,9 @@ Public Class CMprincipal
 
     Private m_ChildFormNumber As Integer
 
-    Private Sub HelpToolStripButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HelpToolStripButton.Click
-        Cliente.Show()
-
-    End Sub
 
     Private Sub UsuarioToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles UsuarioToolStripMenuItem.Click
 
-    End Sub
-
-    Private Sub ClienteToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Dim frmcliente As New Cliente
-        frmcliente.MdiParent = Me
-        frmcliente.Show()
     End Sub
 
     Private Sub UsuarioToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
@@ -133,9 +123,6 @@ Public Class CMprincipal
         MDIfactura()
     End Sub
 
-    Private Sub EmpresaToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles EmpresaToolStripMenuItem1.Click
-        MDIcliente()
-    End Sub
 
     Private Sub NuevoToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles NuevoToolStripMenuItem1.Click
         MDIempleado()
